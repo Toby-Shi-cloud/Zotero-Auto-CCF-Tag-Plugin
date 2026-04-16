@@ -45,18 +45,19 @@ function getItemFieldSafe(item: Zotero.Item, field: string) {
 function getVenueNameVariants(name: string) {
   const normalized = normalizeVenueName(name);
   const variants = new Set<string>([normalized]);
+  const normalizeSpaces = (value: string) => value.replace(/\s+/g, " ").trim();
 
   const withoutProceedingsPrefix = normalized.replace(
     /^proceedings of (the )?/,
     "",
   );
-  variants.add(withoutProceedingsPrefix);
+  variants.add(normalizeSpaces(withoutProceedingsPrefix));
 
   const withoutEditionNumber = withoutProceedingsPrefix.replace(
     /\b\d+(st|nd|rd|th)\b/g,
     "",
   );
-  variants.add(withoutEditionNumber.replace(/\s+/g, " ").trim());
+  variants.add(normalizeSpaces(withoutEditionNumber));
 
   return Array.from(variants).filter(Boolean);
 }
