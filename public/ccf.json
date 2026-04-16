@@ -7,6 +7,10 @@
     "tag": "CCF-C",
     "abbr": "AsiaCCS"
   },
+  "ACM Conference on Computer and Communications Security": {
+    "tag": "CCF-A",
+    "abbr": "CCS"
+  },
   "ACM Conference On Computer-Supported Cooperative Work And Social Computing": {
     "tag": "CCF-A",
     "abbr": "CSCW"
@@ -63,7 +67,7 @@
     "tag": "CCF-A",
     "abbr": "MobiCom"
   },
-  "ACM International Conference on Mobile Human- Computer Interaction": {
+  "ACM International Conference on Mobile Human-Computer Interaction": {
     "tag": "CCF-B",
     "abbr": "MobileHCI"
   },
@@ -91,7 +95,7 @@
     "tag": "CCF-B",
     "abbr": "WSDM"
   },
-  "ACM international joint conference on Pervasive and Ubiquitous Computing": {
+  "ACM International joint conference on Pervasive and Ubiquitous Computing": {
     "tag": "CCF-A",
     "abbr": "UbiComp"
   },
@@ -141,7 +145,7 @@
   },
   "ACM SIGOPS Annual Technical Conference": {
     "tag": "CCF-A",
-    "abbr": "ACMSIGOPSATC （原USENIXATC）"
+    "abbr": "ACMSIGOPSATC"
   },
   "ACM SIGPLAN Conference on Programming Language Design and Implementation": {
     "tag": "CCF-A",
@@ -347,7 +351,7 @@
     "tag": "CCF-A",
     "abbr": "SODA"
   },
-  "ACM/IEEE International Conference on Model Driven EngineeringLanguages and Systems": {
+  "ACM/IEEE International Conference on Model Driven Engineering Languages and Systems": {
     "tag": "CCF-B",
     "abbr": "MoDELS"
   },
@@ -553,15 +557,11 @@
   },
   "CCF Transactions on High Performance Computing": {
     "tag": "CCF-C",
-    "abbr": "CCF- THPC"
+    "abbr": "CCF-THPC"
   },
   "CCF Transactions on Pervasive Computing and Interaction": {
     "tag": "CCF-B",
     "abbr": "CCFTPCI"
-  },
-  "CCS ACM Conference on Computer and Communications Security": {
-    "tag": "CCF-A",
-    "abbr": "AsiaCCS"
   },
   "Chinese Conference on Pattern Recognition and Computer Vision": {
     "tag": "CCF-C",
@@ -605,7 +605,7 @@
   },
   "Computer Communications": {
     "tag": "CCF-C",
-    "abbr": "CC"
+    "abbr": "COMCOM"
   },
   "Computer Graphics Forum": {
     "tag": "CCF-B",
@@ -661,7 +661,7 @@
   },
   "Conference of the International Speech Communication Association": {
     "tag": "CCF-B",
-    "abbr": "INTER- SPEECH"
+    "abbr": "INTERSPEECH"
   },
   "Conference on Automated Deduction": {
     "tag": "CCF-B",
@@ -765,7 +765,7 @@
   },
   "Discover Computing （原 Information Retrieval Journal）": {
     "tag": "CCF-C",
-    "abbr": "（原IR）"
+    "abbr": null
   },
   "Discrete & Computational Geometry": {
     "tag": "CCF-C",
@@ -793,7 +793,7 @@
   },
   "ENGINEERING Information Technology & Electronic Engineering （原 Frontiers of Information Technology & Electronic Engineering）": {
     "tag": "CCF-C",
-    "abbr": "EITEE （原FITEE）"
+    "abbr": "EITEE"
   },
   "EURASIP Journal on Information Security": {
     "tag": "CCF-C",
@@ -951,10 +951,6 @@
     "tag": "CCF-C",
     "abbr": "GLSVLSI"
   },
-  "GRID IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing": {
-    "tag": "CCF-C",
-    "abbr": "CC"
-  },
   "High-Confidence Computing": {
     "tag": "CCF-C",
     "abbr": "HCC"
@@ -982,10 +978,6 @@
   "HotStorage HotStorage": {
     "tag": "CCF-C",
     "abbr": null
-  },
-  "HR Journal of Speech, Language, and Hearing Research American Speech- Language Hearing Association": {
-    "tag": "CCF-B",
-    "abbr": "JSL"
   },
   "Human-Computer Interaction": {
     "tag": "CCF-B",
@@ -1451,6 +1443,10 @@
     "tag": "CCF-C",
     "abbr": null
   },
+  "IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing": {
+    "tag": "CCF-C",
+    "abbr": "CCGRID"
+  },
   "IEEE/ACM International Symposium on Microarchitecture": {
     "tag": "CCF-A",
     "abbr": "MICRO"
@@ -1467,7 +1463,7 @@
     "tag": "CCF-A",
     "abbr": "CVPR"
   },
-  "IEEE\\RSJ International Conference on Intelligent Robots and Systems": {
+  "IEEE/RSJ International Conference on Intelligent Robots and Systems": {
     "tag": "CCF-C",
     "abbr": "IROS"
   },
@@ -1491,6 +1487,10 @@
     "tag": "CCF-C",
     "abbr": null
   },
+  "IET Signal Processing": {
+    "tag": "CCF-C",
+    "abbr": "IETS"
+  },
   "IET Software": {
     "tag": "CCF-B",
     "abbr": "IETS"
@@ -1502,10 +1502,6 @@
   "IFIP WG 11.9 IFIP Working Group 11.9 International Conference on Digital Forensics": {
     "tag": "CCF-C",
     "abbr": null
-  },
-  "ignal Processing": {
-    "tag": "CCF-C",
-    "abbr": "IETS"
   },
   "IJCB International Joint Conference on Biometrics": {
     "tag": "CCF-C",
@@ -1681,7 +1677,7 @@
   },
   "International Conference on Computer Animation, Social Agents, and Extended Reality （原 International Conference on Computer Animation and Social Agents）": {
     "tag": "CCF-C",
-    "abbr": "CASAXR （原CASA）"
+    "abbr": "CASAXR"
   },
   "International Conference on Computer Design": {
     "tag": "CCF-B",
@@ -1699,7 +1695,7 @@
     "tag": "CCF-B",
     "abbr": "ICCAD"
   },
-  "International Conference on Computer-Aided Design and Computer Graphics Processing": {
+  "International Conference on Computer-Aided Design and Computer Graphics": {
     "tag": "CCF-C",
     "abbr": "CAD/Graphics"
   },
@@ -1761,7 +1757,7 @@
   },
   "International Conference on Formal Structures for Computation and Deduction": {
     "tag": "CCF-C",
-    "abbr": "FSCD （原RTA）"
+    "abbr": "FSCD"
   },
   "International Conference on Formal Techniques for Distributed Objects, Components, and Systems": {
     "tag": "CCF-C",
@@ -1775,7 +1771,7 @@
     "tag": "CCF-B",
     "abbr": "HiPEAC"
   },
-  "International Conference on Human- Computer Interaction of International Federation for Information Processing": {
+  "International Conference on Human-Computer Interaction of International Federation for Information Processing": {
     "tag": "CCF-C",
     "abbr": "INTERACT"
   },
@@ -2049,7 +2045,7 @@
   },
   "Journal of Complexity": {
     "tag": "CCF-C",
-    "abbr": "JCOMPLEXI TY"
+    "abbr": "JCOMPLEXITY"
   },
   "Journal of Computer and System Sciences": {
     "tag": "CCF-B",
@@ -2127,6 +2123,10 @@
     "tag": "CCF-B",
     "abbr": null
   },
+  "Journal of Speech, Language, and Hearing Research": {
+    "tag": "CCF-B",
+    "abbr": "JSLHR"
+  },
   "Journal of Symbolic Computation": {
     "tag": "CCF-B",
     "abbr": "JSC"
@@ -2174,10 +2174,6 @@
   "KSEM International conference on Knowledge Science, Engineering and Management": {
     "tag": "CCF-C",
     "abbr": null
-  },
-  "L Transactions of the Association for Computational Linguistics The": {
-    "tag": "CCF-B",
-    "abbr": "TAC"
   },
   "LISA Large Installation System Administration Conference": {
     "tag": "CCF-B",
@@ -2247,15 +2243,15 @@
     "tag": "CCF-C",
     "abbr": null
   },
+  "National Conference on Man-Machine Speech Communication": {
+    "tag": "CCF-C",
+    "abbr": "NCMMSC"
+  },
   "Natural Computing": {
     "tag": "CCF-C",
     "abbr": null
   },
   "NCA Neural Computing and Applications": {
-    "tag": "CCF-C",
-    "abbr": null
-  },
-  "NCMMSC National Conference on Man-Machine Speech Communication CCF/中国中 文信息学会": {
     "tag": "CCF-C",
     "abbr": null
   },
@@ -2311,7 +2307,7 @@
     "tag": "CCF-C",
     "abbr": null
   },
-  "Pacific Conference onComputer Graphics and Applications": {
+  "Pacific Conference on Computer Graphics and Applications": {
     "tag": "CCF-B",
     "abbr": "PG"
   },
@@ -2604,10 +2600,6 @@
     "abbr": "VLDBJ"
   },
   "The Web Conference": {
-    "tag": "CCF-B",
-    "abbr": "WWW"
-  },
-  "The Web Conference （原 International World Wide Web Conference）": {
     "tag": "CCF-A",
     "abbr": "WWW"
   },
@@ -2626,6 +2618,10 @@
   "Theory of Cryptography Conference": {
     "tag": "CCF-B",
     "abbr": "TCC"
+  },
+  "Transactions of the Association for Computational Linguistics": {
+    "tag": "CCF-B",
+    "abbr": "TAC"
   },
   "USENIX Conference on File and Storage Technologies": {
     "tag": "CCF-A",
