@@ -10,7 +10,7 @@ interface CCFEntry {
 type CCFData = Record<string, CCFEntry>;
 
 const CCF_JSON_PATH = `${rootURI}public/ccf.json`;
-const VENU_FIELDS = [
+const VENUE_FIELDS = [
   "publicationTitle",
   "proceedingsTitle",
   "conferenceName",
@@ -22,6 +22,7 @@ let ccfDataPromise: Promise<CCFData> | undefined;
 let fullNameIndex: Map<string, CCFEntry> | undefined;
 let abbrIndex: Map<string, CCFEntry> | undefined;
 let notifierID: string | undefined;
+const suppressedModifyEvents = new Set<number>();
 
 function normalizeVenueName(name: string): string {
   return name
@@ -30,6 +31,14 @@ function normalizeVenueName(name: string): string {
     .replace(/[^a-z0-9]+/g, " ")
     .trim()
     .replace(/\s+/g, " ");
+}
+
+function getItemFieldSafe(item: Zotero.Item, field: string) {
+  try {
+    return item.getField(field)?.trim();
+  } catch (_) {
+    return "";
+  }
 }
 
 async function loadCCFData() {
@@ -67,8 +76,8 @@ async function loadCCFData() {
 function getVenueCandidates(item: Zotero.Item): string[] {
   const candidates: string[] = [];
 
-  for (const field of VENU_FIELDS) {
-    const value = item.getField(field)?.trim();
+  for (const field of VENUE_FIELDS) {
+    const value = getItemFieldSafe(item, field);
     if (value) {
       candidates.push(value);
     }
@@ -77,9 +86,11 @@ function getVenueCandidates(item: Zotero.Item): string[] {
   return candidates;
 }
 
-async function findCCFEntryForItem(item: Zotero.Item): Promise<CCFEntry | undefined> {
+async function findCCFEntryForItem(
+  item: Zotero.Item,
+): Promise<CCFEntry | undefined> {
   await loadCCFData();
-  if (!fullNameIndex || !abbrIndex) return;
+  if (!fullNameIndex || !abbrIndex) return undefined;
 
   const candidates = getVenueCandidates(item);
   for (const venueName of candidates) {
@@ -94,6 +105,8 @@ async function findCCFEntryForItem(item: Zotero.Item): Promise<CCFEntry | undefi
       return matchedByAbbr;
     }
   }
+
+  return undefined;
 }
 
 function getTagsByEntry(entry: CCFEntry): string[] {
@@ -121,6 +134,9 @@ export async function applyCCFTagsToItem(item: Zotero.Item): Promise<boolean> {
   }
 
   if (changed) {
+    if (typeof item.id === "number") {
+      suppressedModifyEvents.add(item.id);
+    }
     await item.saveTx();
   }
 
@@ -128,13 +144,14 @@ export async function applyCCFTagsToItem(item: Zotero.Item): Promise<boolean> {
 }
 
 async function applyTagsToItemIDs(ids: Array<number | string>) {
-  const items = await Zotero.Items.getAsync(ids);
-  const normalizedItems = Array.isArray(items) ? items : [items];
+  const fetchedItems = await Promise.all(
+    ids.map((id) => Zotero.Items.getAsync(id)),
+  );
 
   let scanned = 0;
   let tagged = 0;
 
-  for (const item of normalizedItems) {
+  for (const item of fetchedItems) {
     scanned += 1;
     if (await applyCCFTagsToItem(item)) {
       tagged += 1;
@@ -155,7 +172,12 @@ export async function applyCCFTagsToAllLibraries() {
       continue;
     }
 
-    const items = await Zotero.Items.getAll(library.libraryID, false, false, false);
+    const items = await Zotero.Items.getAll(
+      library.libraryID,
+      false,
+      false,
+      false,
+    );
     for (const item of items) {
       scanned += 1;
       if (await applyCCFTagsToItem(item)) {
@@ -185,10 +207,25 @@ export function registerCCFNotifier() {
         return;
       }
 
+      if (event === "modify") {
+        const activeIDs = ids.filter(
+          (id): id is number => typeof id === "number",
+        );
+        const shouldSuppress = activeIDs.some((id) =>
+          suppressedModifyEvents.delete(id),
+        );
+        if (shouldSuppress) {
+          return;
+        }
+      }
+
       try {
         await applyTagsToItemIDs(ids);
       } catch (error) {
-        ztoolkit.log(`[${config.addonRef}] Failed to apply tags from notifier`, error);
+        ztoolkit.log(
+          `[${config.addonRef}] Failed to apply tags from notifier`,
+          error,
+        );
       }
     },
   };

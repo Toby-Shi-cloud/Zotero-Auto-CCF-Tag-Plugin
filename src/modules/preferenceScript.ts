@@ -13,7 +13,7 @@ export async function registerPrefsScripts(_window: Window) {
     try {
       const result = await applyCCFTagsToAllLibraries();
       _window.alert(
-        `CCF 标签处理完成。已扫描 ${result.scanned} 条，新增标签 ${result.tagged} 条。`,
+        `CCF 标签处理完成。已扫描 ${result.scanned} 条， 新增标签 ${result.tagged} 条。`,
       );
     } catch (error) {
       ztoolkit.log("Failed to apply CCF tags for library", error);

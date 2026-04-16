@@ -3,5 +3,14 @@
 /* eslint-disable */
 // @ts-nocheck
 export type FluentMessageId =
+  | 'item-info-row-example-label'
+  | 'item-section-example1-head-text'
+  | 'item-section-example1-sidenav-tooltip'
+  | 'item-section-example2-button-tooltip'
+  | 'item-section-example2-head-text'
+  | 'item-section-example2-sidenav-tooltip'
+  | 'pref-batch-desc'
   | 'pref-help'
+  | 'pref-run-batch'
+  | 'pref-title'
   | 'prefs-title';

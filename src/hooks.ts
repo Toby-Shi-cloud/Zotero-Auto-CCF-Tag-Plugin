@@ -1,7 +1,10 @@
 import { initLocale } from "./utils/locale";
 import { registerPrefsScripts } from "./modules/preferenceScript";
 import { registerPrefsPane } from "./modules/prefs";
-import { registerCCFNotifier, unregisterCCFNotifier } from "./modules/ccfTagger";
+import {
+  registerCCFNotifier,
+  unregisterCCFNotifier,
+} from "./modules/ccfTagger";
 
 async function onStartup() {
   await Promise.all([

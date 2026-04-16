@@ -3,9 +3,11 @@
 /* eslint-disable */
 // @ts-nocheck
 
+// prettier-ignore
 declare namespace _ZoteroTypes {
   interface Prefs {
     PluginPrefsMap: {
+      
     };
   }
 }
