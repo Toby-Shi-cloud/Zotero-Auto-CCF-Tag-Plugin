@@ -21,6 +21,7 @@ const VENUE_FIELDS = [
 let ccfDataPromise: Promise<CCFData> | undefined;
 let fullNameIndex: Map<string, CCFEntry> | undefined;
 let abbrIndex: Map<string, CCFEntry> | undefined;
+let sortedFullNameKeys: string[] | undefined;
 let notifierID: string | undefined;
 const suppressedModifyEvents = new Set<number>();
 
@@ -39,6 +40,25 @@ function getItemFieldSafe(item: Zotero.Item, field: string) {
   } catch (_) {
     return "";
   }
+}
+
+function getVenueNameVariants(name: string) {
+  const normalized = normalizeVenueName(name);
+  const variants = new Set<string>([normalized]);
+
+  const withoutProceedingsPrefix = normalized.replace(
+    /^proceedings of (the )?/,
+    "",
+  );
+  variants.add(withoutProceedingsPrefix);
+
+  const withoutEditionNumber = withoutProceedingsPrefix.replace(
+    /\b\d+(st|nd|rd|th)\b/g,
+    "",
+  );
+  variants.add(withoutEditionNumber.replace(/\s+/g, " ").trim());
+
+  return Array.from(variants).filter(Boolean);
 }
 
 async function loadCCFData() {
@@ -60,12 +80,17 @@ async function loadCCFData() {
         }
       }
 
+      sortedFullNameKeys = Array.from(fullNameIndex.keys()).sort(
+        (a, b) => b.length - a.length,
+      );
+
       return parsed;
     })().catch((error) => {
       ztoolkit.log(`[${config.addonRef}] Failed to load CCF data`, error);
       ccfDataPromise = undefined;
       fullNameIndex = undefined;
       abbrIndex = undefined;
+      sortedFullNameKeys = undefined;
       throw error;
     });
   }
@@ -90,19 +115,28 @@ async function findCCFEntryForItem(
   item: Zotero.Item,
 ): Promise<CCFEntry | undefined> {
   await loadCCFData();
-  if (!fullNameIndex || !abbrIndex) return undefined;
+  if (!fullNameIndex || !abbrIndex || !sortedFullNameKeys) return undefined;
 
   const candidates = getVenueCandidates(item);
   for (const venueName of candidates) {
-    const key = normalizeVenueName(venueName);
-    const matchedByName = fullNameIndex.get(key);
-    if (matchedByName) {
-      return matchedByName;
-    }
+    const variants = getVenueNameVariants(venueName);
+    for (const key of variants) {
+      const matchedByName = fullNameIndex.get(key);
+      if (matchedByName) {
+        return matchedByName;
+      }
 
-    const matchedByAbbr = abbrIndex.get(key);
-    if (matchedByAbbr) {
-      return matchedByAbbr;
+      const matchedByAbbr = abbrIndex.get(key);
+      if (matchedByAbbr) {
+        return matchedByAbbr;
+      }
+
+      const includedFullName = sortedFullNameKeys.find((fullName) =>
+        key.includes(fullName),
+      );
+      if (includedFullName) {
+        return fullNameIndex.get(includedFullName);
+      }
     }
   }
 
