@@ -5,6 +5,10 @@ import {
   PromptExampleFactory,
   UIExampleFactory,
 } from "./modules/examples";
+import {
+  clearCCFTaggingTasks,
+  scheduleCCFTaggingForItems,
+} from "./modules/ccfTagger";
 import { getString, initLocale } from "./utils/locale";
 import { registerPrefsScripts } from "./modules/preferenceScript";
 import { createZToolkit } from "./utils/ztoolkit";
@@ -99,6 +103,7 @@ async function onMainWindowUnload(win: Window): Promise<void> {
 }
 
 function onShutdown(): void {
+  clearCCFTaggingTasks();
   ztoolkit.unregisterAll();
   addon.data.dialog?.window?.close();
   // Remove addon object
@@ -119,6 +124,10 @@ async function onNotify(
 ) {
   // You can add your code to the corresponding notify type
   ztoolkit.log("notify", event, type, ids, extraData);
+  if ((event === "add" || event === "modify") && type === "item") {
+    scheduleCCFTaggingForItems(ids);
+    return;
+  }
   if (
     event == "select" &&
     type == "tab" &&

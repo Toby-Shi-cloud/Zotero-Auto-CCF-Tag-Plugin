@@ -54,6 +54,7 @@ If you are using this repo, I recommended that you put the following badge on yo
 
 ## Features
 
+- Automatically detects newly added items after metadata updates and applies `CCF-A` / `CCF-B` / `CCF-C` tags using the standards from `public/第七版中国计算机学会推荐国际学术会议和期刊目录（正式版）.pdf`.
 - Event-driven, functional programming, under extensive skeleton;
 - Simple and user-friendly, works out-of-the-box.
 - Abundant examples in `src/modules/examples.ts`, covering most of the commonly used APIs in plugins (using [zotero-plugin-toolkit](https://github.com/windingwind/zotero-plugin-toolkit));
