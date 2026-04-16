@@ -1,24 +1,24 @@
 {
-  "name": "zotero-plugin-template",
+  "name": "zotero-auto-ccf-tag-plugin",
   "type": "module",
-  "version": "3.1.0",
-  "description": "Zotero Plugin Template",
+  "version": "0.0.1",
+  "description": "Zotero Auto CCF Tag Plugin",
   "config": {
-    "addonName": "Zotero Plugin Template",
-    "addonID": "addontemplate@euclpts.com",
-    "addonRef": "addontemplate",
-    "addonInstance": "AddonTemplate",
-    "prefsPrefix": "extensions.zotero.addontemplate"
+    "addonName": "Zotero Auto CCF Tag Plugin",
+    "addonID": "zoteroautoccftagplugin@tobyshi.com",
+    "addonRef": "autoccftag",
+    "addonInstance": "AutoCcfTag",
+    "prefsPrefix": "extensions.zotero.autoccftag"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/windingwind/zotero-plugin-template.git"
+    "url": "git+https://github.com/Toby-Shi-cloud/Zotero-Auto-CCF-Tag-Plugin.git"
   },
-  "author": "windingwind",
+  "author": "Toby Shi",
   "bugs": {
-    "url": "https://github.com/windingwind/zotero-plugin-template/issues"
+    "url": "https://github.com/Toby-Shi-cloud/Zotero-Auto-CCF-Tag-Plugin/issues"
   },
-  "homepage": "https://github.com/windingwind/zotero-plugin-template#readme",
+  "homepage": "https://github.com/Toby-Shi-cloud/Zotero-Auto-CCF-Tag-Plugin#readme",
   "license": "AGPL-3.0-or-later",
   "scripts": {
     "start": "zotero-plugin serve",
