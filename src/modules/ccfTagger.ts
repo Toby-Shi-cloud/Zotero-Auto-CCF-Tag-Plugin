@@ -46,6 +46,8 @@ function getVenueNameVariants(name: string) {
   const normalized = normalizeVenueName(name);
   const variants = new Set<string>([normalized]);
   const normalizeSpaces = (value: string) => value.replace(/\s+/g, " ").trim();
+  const EDITION_WORD_PATTERN =
+    /\b(first|second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth|eleventh|twelfth|thirteenth|fourteenth|fifteenth|sixteenth|seventeenth|eighteenth|nineteenth|twentieth)\b/g;
 
   const withoutProceedingsPrefix = normalized.replace(
     /^proceedings of (the )?/,
@@ -53,11 +55,26 @@ function getVenueNameVariants(name: string) {
   );
   variants.add(normalizeSpaces(withoutProceedingsPrefix));
 
-  const withoutEditionNumber = withoutProceedingsPrefix.replace(
+  const withoutLeadingYear = withoutProceedingsPrefix.replace(/^\d{4}\s+/, "");
+  variants.add(normalizeSpaces(withoutLeadingYear));
+
+  const withoutEditionNumber = withoutLeadingYear.replace(
     /\b\d+(st|nd|rd|th)\b/g,
     "",
   );
   variants.add(normalizeSpaces(withoutEditionNumber));
+
+  const withoutEditionWord = withoutEditionNumber.replace(
+    EDITION_WORD_PATTERN,
+    "",
+  );
+  variants.add(normalizeSpaces(withoutEditionWord));
+
+  const withoutYearAndEditionWord = withoutLeadingYear.replace(
+    EDITION_WORD_PATTERN,
+    "",
+  );
+  variants.add(normalizeSpaces(withoutYearAndEditionWord));
 
   return Array.from(variants).filter(Boolean);
 }
