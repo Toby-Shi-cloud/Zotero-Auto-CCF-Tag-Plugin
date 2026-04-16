@@ -18,6 +18,19 @@ function example(
   return descriptor;
 }
 
+type LegacyMenuRegister = (
+  target: string,
+  options: Record<string, unknown>,
+  position?: "before" | "after",
+  referenceNode?: XUL.MenuItem,
+) => void;
+
+const legacyMenuRegister =
+  // `Menu` was removed from ztoolkit's public typings in newer toolkit versions,
+  // but this scaffold example still uses the legacy runtime API.
+  (ztoolkit as unknown as { Menu: { register: LegacyMenuRegister } }).Menu
+    .register;
+
 export class BasicExampleFactory {
   @example
   static registerNotifier() {
@@ -140,7 +153,7 @@ export class UIExampleFactory {
   static registerRightClickMenuItem() {
     const menuIcon = `chrome://${addon.data.config.addonRef}/content/icons/favicon@0.5x.png`;
     // item menuitem with icon
-    (ztoolkit as any).Menu.register("item", {
+    legacyMenuRegister("item", {
       tag: "menuitem",
       id: "zotero-itemmenu-addontemplate-test",
       label: getString("menuitem-label"),
@@ -152,7 +165,7 @@ export class UIExampleFactory {
 
   @example
   static registerRightClickMenuPopup(win: Window) {
-    (ztoolkit as any).Menu.register(
+    legacyMenuRegister(
       "item",
       {
         tag: "menu",
@@ -174,11 +187,11 @@ export class UIExampleFactory {
 
   @example
   static registerWindowMenuWithSeparator() {
-    (ztoolkit as any).Menu.register("menuFile", {
+    legacyMenuRegister("menuFile", {
       tag: "menuseparator",
     });
     // menu->File menuitem
-    (ztoolkit as any).Menu.register("menuFile", {
+    legacyMenuRegister("menuFile", {
       tag: "menuitem",
       label: getString("menuitem-filemenulabel"),
       oncommand: "alert('Hello World! File Menuitem.')",
