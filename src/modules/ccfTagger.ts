@@ -17,6 +17,55 @@ const VENUE_FIELDS = [
   "bookTitle",
   "seriesTitle",
 ];
+const ORDINAL_BASE_WORDS = [
+  "first",
+  "second",
+  "third",
+  "fourth",
+  "fifth",
+  "sixth",
+  "seventh",
+  "eighth",
+  "ninth",
+  "tenth",
+  "eleventh",
+  "twelfth",
+  "thirteenth",
+  "fourteenth",
+  "fifteenth",
+  "sixteenth",
+  "seventeenth",
+  "eighteenth",
+  "nineteenth",
+  "twentieth",
+  "thirtieth",
+  "fortieth",
+  "fiftieth",
+  "sixtieth",
+  "seventieth",
+  "eightieth",
+  "ninetieth",
+  "hundredth",
+];
+const ORDINAL_TENS_WORDS = [
+  "twenty",
+  "thirty",
+  "forty",
+  "fifty",
+  "sixty",
+  "seventy",
+  "eighty",
+  "ninety",
+];
+const ORDINAL_UNIT_WORD_PATTERN =
+  "first|second|third|fourth|fifth|sixth|seventh|eighth|ninth";
+const EDITION_WORD_PATTERN = [
+  ORDINAL_BASE_WORDS.join("|"),
+  ...ORDINAL_TENS_WORDS.map(
+    (tens) => `${tens}[- ](?:${ORDINAL_UNIT_WORD_PATTERN})`,
+  ),
+].join("|");
+const EDITION_WORD_REGEX = new RegExp(`\\b(?:${EDITION_WORD_PATTERN})\\b`, "g");
 
 let ccfDataPromise: Promise<CCFData> | undefined;
 let fullNameIndex: Map<string, CCFEntry> | undefined;
@@ -24,6 +73,11 @@ let abbrIndex: Map<string, CCFEntry> | undefined;
 let sortedFullNameKeys: string[] | undefined;
 let notifierID: string | undefined;
 const suppressedModifyEvents = new Set<number>();
+
+function stripEditionWords(value: string): string {
+  EDITION_WORD_REGEX.lastIndex = 0;
+  return value.replace(EDITION_WORD_REGEX, "");
+}
 
 function normalizeVenueName(name: string): string {
   return name
@@ -53,11 +107,20 @@ function getVenueNameVariants(name: string) {
   );
   variants.add(normalizeSpaces(withoutProceedingsPrefix));
 
-  const withoutEditionNumber = withoutProceedingsPrefix.replace(
+  const withoutLeadingYear = withoutProceedingsPrefix.replace(
+    /^(19|20)\d{2}\s+/,
+    "",
+  );
+  variants.add(normalizeSpaces(withoutLeadingYear));
+
+  const withoutEditionNumber = withoutLeadingYear.replace(
     /\b\d+(st|nd|rd|th)\b/g,
     "",
   );
   variants.add(normalizeSpaces(withoutEditionNumber));
+
+  const withoutEditionWord = stripEditionWords(withoutEditionNumber);
+  variants.add(normalizeSpaces(withoutEditionWord));
 
   return Array.from(variants).filter(Boolean);
 }
