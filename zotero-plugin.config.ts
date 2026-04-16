@@ -14,7 +14,7 @@ export default defineConfig({
     "https://github.com/{{owner}}/{{repo}}/releases/download/v{{version}}/{{xpiName}}.xpi",
 
   build: {
-    assets: ["addon/**/*.*"],
+    assets: ["addon/**/*.*", "public/ccf.json"],
     define: {
       ...pkg.config,
       author: pkg.author,
