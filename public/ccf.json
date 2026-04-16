@@ -1,0 +1,2698 @@
+{
+  "AAAI Conference on Artificial Intelligence": {
+    "tag": "CCF-A",
+    "abbr": "AAAI"
+  },
+  "ACM Asia Conference on Computer and Communications Security": {
+    "tag": "CCF-C",
+    "abbr": "AsiaCCS"
+  },
+  "ACM Conference On Computer-Supported Cooperative Work And Social Computing": {
+    "tag": "CCF-A",
+    "abbr": "CSCW"
+  },
+  "ACM Conference on Embedded Networked Sensor Systems": {
+    "tag": "CCF-B",
+    "abbr": "SenSys"
+  },
+  "ACM Conference on Human Factors in Computing Systems": {
+    "tag": "CCF-A",
+    "abbr": "CHI"
+  },
+  "ACM Conference on Recommender Systems": {
+    "tag": "CCF-B",
+    "abbr": "RecSys"
+  },
+  "ACM Conference on Security and Privacy in Wireless and Mobile Networks": {
+    "tag": "CCF-C",
+    "abbr": "WiSec"
+  },
+  "ACM Distributed Ledger Technologies: Research and Practice": {
+    "tag": "CCF-C",
+    "abbr": "ACMDLT"
+  },
+  "ACM Interaction Design and Children": {
+    "tag": "CCF-C",
+    "abbr": "IDC"
+  },
+  "ACM International Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication": {
+    "tag": "CCF-A",
+    "abbr": "SIGCOMM"
+  },
+  "ACM International Conference on Computing Frontiers": {
+    "tag": "CCF-C",
+    "abbr": "CF"
+  },
+  "ACM International Conference on Emerging Networking Experiments and Technologies": {
+    "tag": "CCF-B",
+    "abbr": "CoNEXT"
+  },
+  "ACM International Conference on Information and Knowledge Management": {
+    "tag": "CCF-B",
+    "abbr": "CIKM"
+  },
+  "ACM International Conference on Intelligent User Interfaces": {
+    "tag": "CCF-B",
+    "abbr": "IUI"
+  },
+  "ACM International Conference on Interactive Surfaces and Spaces": {
+    "tag": "CCF-B",
+    "abbr": "ISS"
+  },
+  "ACM International Conference on Mobile Computing and Networking": {
+    "tag": "CCF-A",
+    "abbr": "MobiCom"
+  },
+  "ACM International Conference on Mobile Human- Computer Interaction": {
+    "tag": "CCF-B",
+    "abbr": "MobileHCI"
+  },
+  "ACM International Conference on Mobile Systems, Applications, and Services": {
+    "tag": "CCF-B",
+    "abbr": "MobiSys"
+  },
+  "ACM International Conference on Multimedia": {
+    "tag": "CCF-A",
+    "abbr": "ACMMM"
+  },
+  "ACM International Conference on Multimodal Interaction": {
+    "tag": "CCF-C",
+    "abbr": "ICMI"
+  },
+  "ACM International Conference on Supporting Group Work": {
+    "tag": "CCF-B",
+    "abbr": "GROUP"
+  },
+  "ACM International Conference on the Foundations of Software Engineering": {
+    "tag": "CCF-A",
+    "abbr": "FSE"
+  },
+  "ACM International Conference on Web Search and Data Mining": {
+    "tag": "CCF-B",
+    "abbr": "WSDM"
+  },
+  "ACM international joint conference on Pervasive and Ubiquitous Computing": {
+    "tag": "CCF-A",
+    "abbr": "UbiComp"
+  },
+  "ACM International Systems and Storage Conference": {
+    "tag": "CCF-C",
+    "abbr": "SYSTOR"
+  },
+  "ACM Internet Measurement Conference": {
+    "tag": "CCF-B",
+    "abbr": "IMC"
+  },
+  "ACM Journal on Emerging Technologies in Computing Systems": {
+    "tag": "CCF-C",
+    "abbr": "JETC"
+  },
+  "ACM Multimedia Asia": {
+    "tag": "CCF-C",
+    "abbr": "MMAsia"
+  },
+  "ACM SIGCHI Conference on Designing Interactive Systems": {
+    "tag": "CCF-C",
+    "abbr": "DIS"
+  },
+  "ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games": {
+    "tag": "CCF-B",
+    "abbr": "I3D"
+  },
+  "ACM SIGGRAPH/Eurographics Symposium on Computer Animation": {
+    "tag": "CCF-B",
+    "abbr": "SCA"
+  },
+  "ACM SIGKDD Conference on Knowledge Discovery and Data Mining": {
+    "tag": "CCF-A",
+    "abbr": "SIGKDD"
+  },
+  "ACM SIGMM International Conference on Multimedia Retrieval": {
+    "tag": "CCF-B",
+    "abbr": "ICMR"
+  },
+  "ACM SIGMOD Conference": {
+    "tag": "CCF-A",
+    "abbr": "SIGMOD"
+  },
+  "ACM SIGMOD-SIGACT-SIGAI Symposium on Principles of Database Systems": {
+    "tag": "CCF-B",
+    "abbr": "PODS"
+  },
+  "ACM SIGOPS Annual Technical Conference": {
+    "tag": "CCF-A",
+    "abbr": "ACMSIGOPSATC （原USENIXATC）"
+  },
+  "ACM SIGPLAN Conference on Programming Language Design and Implementation": {
+    "tag": "CCF-A",
+    "abbr": "PLDI"
+  },
+  "ACM SIGPLAN International Conference on Function Programming": {
+    "tag": "CCF-B",
+    "abbr": "ICFP"
+  },
+  "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming": {
+    "tag": "CCF-A",
+    "abbr": "PPoPP"
+  },
+  "ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation": {
+    "tag": "CCF-C",
+    "abbr": "PEPM"
+  },
+  "ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages": {
+    "tag": "CCF-A",
+    "abbr": "POPL"
+  },
+  "ACM SIGPLAN/SIGBED International Conference on Languages, Compilers and Tools for Embedded Systems": {
+    "tag": "CCF-B",
+    "abbr": "LCTES"
+  },
+  "ACM Special Interest Group on Computer Graphics": {
+    "tag": "CCF-A",
+    "abbr": "SIGGRAPH"
+  },
+  "ACM Special Interest Group on Spatial Information": {
+    "tag": "CCF-C",
+    "abbr": "SIGSPATIAL"
+  },
+  "ACM Symposium on Access Control Models and Technologies": {
+    "tag": "CCF-C",
+    "abbr": "SACMAT"
+  },
+  "ACM Symposium on Cloud Computing": {
+    "tag": "CCF-B",
+    "abbr": "SoCC"
+  },
+  "ACM Symposium on Operating Systems Principles": {
+    "tag": "CCF-A",
+    "abbr": "SOSP"
+  },
+  "ACM Symposium on Parallelism in Algorithms and Architectures": {
+    "tag": "CCF-B",
+    "abbr": "SPAA"
+  },
+  "ACM Symposium on Principles of Distributed Computing": {
+    "tag": "CCF-B",
+    "abbr": "PODC"
+  },
+  "ACM Symposium on the Theory of Computing": {
+    "tag": "CCF-A",
+    "abbr": "STOC"
+  },
+  "ACM Symposium on User Interface Software and Technology": {
+    "tag": "CCF-A",
+    "abbr": "UIST"
+  },
+  "ACM Symposium on Virtual Reality Software and Technology": {
+    "tag": "CCF-C",
+    "abbr": "VRST"
+  },
+  "ACM Transactions in Quantum Computing": {
+    "tag": "CCF-C",
+    "abbr": "TQC"
+  },
+  "ACM Transactions on Algorithms": {
+    "tag": "CCF-B",
+    "abbr": "TALG"
+  },
+  "ACM Transactions on Applied Perception": {
+    "tag": "CCF-B",
+    "abbr": "TAP"
+  },
+  "ACM Transactions on Architecture and Code Optimization": {
+    "tag": "CCF-A",
+    "abbr": "TACO"
+  },
+  "ACM Transactions on Asian and Low-Resource Language Information Processing": {
+    "tag": "CCF-C",
+    "abbr": "TALLIP"
+  },
+  "ACM Transactions on Autonomous and Adaptive Systems": {
+    "tag": "CCF-B",
+    "abbr": "TAAS"
+  },
+  "ACM Transactions on Computational Logic": {
+    "tag": "CCF-B",
+    "abbr": "TOCL"
+  },
+  "ACM Transactions on Computer Systems": {
+    "tag": "CCF-A",
+    "abbr": "TOCS"
+  },
+  "ACM Transactions on Computer-Human Interaction": {
+    "tag": "CCF-A",
+    "abbr": "TOCHI"
+  },
+  "ACM Transactions on Computing Education": {
+    "tag": "CCF-C",
+    "abbr": "TOCE"
+  },
+  "ACM Transactions on Computing for Healthcare": {
+    "tag": "CCF-C",
+    "abbr": "HEALTH"
+  },
+  "ACM Transactions on Cyber-Physical Systems": {
+    "tag": "CCF-C",
+    "abbr": "TCPS"
+  },
+  "ACM Transactions on Database Systems": {
+    "tag": "CCF-A",
+    "abbr": "TODS"
+  },
+  "ACM Transactions on Design Automation of Electronic Systems": {
+    "tag": "CCF-B",
+    "abbr": "TODAES"
+  },
+  "ACM Transactions on Embedded Computing Systems": {
+    "tag": "CCF-B",
+    "abbr": "TECS"
+  },
+  "ACM Transactions on Graphics": {
+    "tag": "CCF-A",
+    "abbr": "TOG"
+  },
+  "ACM Transactions on Human-Robot Interaction": {
+    "tag": "CCF-C",
+    "abbr": "THRI"
+  },
+  "ACM Transactions on Information Systems": {
+    "tag": "CCF-A",
+    "abbr": "TOIS"
+  },
+  "ACM Transactions on Intelligent Systems and Technology": {
+    "tag": "CCF-C",
+    "abbr": "TIST"
+  },
+  "ACM Transactions on Internet of Things": {
+    "tag": "CCF-C",
+    "abbr": "TIOT"
+  },
+  "ACM Transactions on Internet Technology": {
+    "tag": "CCF-B",
+    "abbr": "TOIT"
+  },
+  "ACM Transactions on Knowledge Discovery from Data": {
+    "tag": "CCF-B",
+    "abbr": "TKDD"
+  },
+  "ACM Transactions on Mathematical Software": {
+    "tag": "CCF-B",
+    "abbr": "TOMS"
+  },
+  "ACM Transactions on Multimedia Computing, Communications and Applications": {
+    "tag": "CCF-B",
+    "abbr": "TOMM"
+  },
+  "ACM Transactions on Privacy and Security": {
+    "tag": "CCF-B",
+    "abbr": "TOPS"
+  },
+  "ACM Transactions on Programming Languages and Systems": {
+    "tag": "CCF-A",
+    "abbr": "TOPLAS"
+  },
+  "ACM Transactions on Recommender Systems": {
+    "tag": "CCF-C",
+    "abbr": "TORS"
+  },
+  "ACM Transactions on Reconfigurable Technology and Systems": {
+    "tag": "CCF-B",
+    "abbr": "TRETS"
+  },
+  "ACM Transactions on Sensor Networks": {
+    "tag": "CCF-B",
+    "abbr": "TOSN"
+  },
+  "ACM Transactions on Software Engineering and Methodology": {
+    "tag": "CCF-A",
+    "abbr": "TOSEM"
+  },
+  "ACM Transactions on Storage": {
+    "tag": "CCF-A",
+    "abbr": "TOS"
+  },
+  "ACM Transactions on the Web": {
+    "tag": "CCF-B",
+    "abbr": "TWEB"
+  },
+  "ACM Workshop on Digital Rights Management": {
+    "tag": "CCF-C",
+    "abbr": "DRM"
+  },
+  "ACM Workshop on Information Hiding and Multimedia Security": {
+    "tag": "CCF-C",
+    "abbr": "IH&MMSec"
+  },
+  "ACM-SIAM Symposium on Discrete Algorithms": {
+    "tag": "CCF-A",
+    "abbr": "SODA"
+  },
+  "ACM/IEEE International Conference on Model Driven EngineeringLanguages and Systems": {
+    "tag": "CCF-B",
+    "abbr": "MoDELS"
+  },
+  "ACM/IEEE International Symposium on Networks-on-Chip": {
+    "tag": "CCF-C",
+    "abbr": "NOCS"
+  },
+  "ACM/IEEE Symposium on Architectures for Networking and Communication Systems": {
+    "tag": "CCF-C",
+    "abbr": "ANCS"
+  },
+  "ACM/IEEE Symposium on Edge Computing": {
+    "tag": "CCF-C",
+    "abbr": "SEC"
+  },
+  "ACM/IEEE Symposium on Logic in Computer Science": {
+    "tag": "CCF-A",
+    "abbr": "LICS"
+  },
+  "ACM/SIGDA International Symposium on Field-Programmable Gate Arrays": {
+    "tag": "CCF-B",
+    "abbr": "FPGA"
+  },
+  "ACMSIGPLAN-SIGSOFT Workshop on Program Analysis for Software Tools and Engineering": {
+    "tag": "CCF-C",
+    "abbr": "PASTE"
+  },
+  "Acta Informatica": {
+    "tag": "CCF-C",
+    "abbr": "ACTA"
+  },
+  "Ad Hoc Networks": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Advanced Engineering Informatics": {
+    "tag": "CCF-B",
+    "abbr": "AEI"
+  },
+  "Advances in Financial Technologies": {
+    "tag": "CCF-C",
+    "abbr": "AFT"
+  },
+  "Algorithmica": {
+    "tag": "CCF-B",
+    "abbr": "Algorithmica"
+  },
+  "American Medical Informatics Association Annual Symposium": {
+    "tag": "CCF-C",
+    "abbr": "AMIA"
+  },
+  "Annals of Pure and Applied Logic": {
+    "tag": "CCF-C",
+    "abbr": "APAL"
+  },
+  "Annual Computer Security Applications Conference": {
+    "tag": "CCF-B",
+    "abbr": "ACSAC"
+  },
+  "Annual Conference of the European Association for Computer Graphics": {
+    "tag": "CCF-B",
+    "abbr": "Eurographics"
+  },
+  "Annual Conference on Computational Learning Theory": {
+    "tag": "CCF-B",
+    "abbr": "COLT"
+  },
+  "Annual International Conference on Research in Computational Molecular Biology": {
+    "tag": "CCF-B",
+    "abbr": "RECOMB"
+  },
+  "Annual International Conference on the Theory and Application of Cryptology and Information Security": {
+    "tag": "CCF-B",
+    "abbr": "ASIACRYPT"
+  },
+  "Annual Meeting of the Association for Computational Linguistics": {
+    "tag": "CCF-A",
+    "abbr": "ACL"
+  },
+  "Annual Meeting of the Cognitive Science Society": {
+    "tag": "CCF-B",
+    "abbr": "CogSci"
+  },
+  "APNet Asia-Pacific Workshop on Networking": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Applied Intelligence": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "APPT International Symposium on Advanced Parallel Processing Technology": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Artificial Intelligence": {
+    "tag": "CCF-A",
+    "abbr": "AI"
+  },
+  "Artificial Intelligence in Medicine": {
+    "tag": "CCF-C",
+    "abbr": "AIM"
+  },
+  "Artificial Life": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Asia and South Pacific Design Automation Conference": {
+    "tag": "CCF-C",
+    "abbr": "ASP-DAC"
+  },
+  "Asia Pacific Bioinformatics Conference": {
+    "tag": "CCF-C",
+    "abbr": "APBC"
+  },
+  "Asia Pacific Web Conference": {
+    "tag": "CCF-C",
+    "abbr": "APWeb"
+  },
+  "Asia-Pacific Network Operations and Management Symposium": {
+    "tag": "CCF-C",
+    "abbr": "APNOMS"
+  },
+  "Asia-Pacific Software Engineering Conference": {
+    "tag": "CCF-C",
+    "abbr": "APSEC"
+  },
+  "Asian Conference on Computer Vision": {
+    "tag": "CCF-C",
+    "abbr": "ACCV"
+  },
+  "Asian Conference on Machine Learning": {
+    "tag": "CCF-C",
+    "abbr": "ACML"
+  },
+  "Asian Symposium on Programming Languages and Systems": {
+    "tag": "CCF-C",
+    "abbr": "APLAS"
+  },
+  "ASRU Automatic Speech Recognition and Understanding Workshop IEEE SLTC": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "ATVA International Symposium on Automated Technology for Verification and Analysis": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Australasia Conference on Information Security and Privacy": {
+    "tag": "CCF-C",
+    "abbr": "ACISP"
+  },
+  "Automated Software Engineering": {
+    "tag": "CCF-B",
+    "abbr": "ASE"
+  },
+  "Autonomous Agents and Multi-Agent Systems": {
+    "tag": "CCF-B",
+    "abbr": "AAMAS"
+  },
+  "Behaviour & Information Technology": {
+    "tag": "CCF-C",
+    "abbr": "BIT"
+  },
+  "Bioinformatics": {
+    "tag": "CCF-A",
+    "abbr": "Bioinformatics"
+  },
+  "Blockchain: Research and Applications": {
+    "tag": "CCF-B",
+    "abbr": "BCRA"
+  },
+  "BlockSys International Conference on Blockchain, Artificial Intelligence, and Trustworthy Systems": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "BMC Bioinformatics": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Briefings in Bioinformatics": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "British Machine Vision Conference": {
+    "tag": "CCF-C",
+    "abbr": "BMVC"
+  },
+  "C Information Security Conference": {
+    "tag": "CCF-C",
+    "abbr": "IS"
+  },
+  "CASES International Conference on Compilers, Architectures, and Synthesis for Embedded Systems": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "CCF International Conference on Extended Reality": {
+    "tag": "CCF-C",
+    "abbr": "ICXR"
+  },
+  "CCF International Conference on Natural Language Processing and Chinese Computing": {
+    "tag": "CCF-C",
+    "abbr": "NLPCC"
+  },
+  "CCF Transactions on High Performance Computing": {
+    "tag": "CCF-C",
+    "abbr": "CCF- THPC"
+  },
+  "CCF Transactions on Pervasive Computing and Interaction": {
+    "tag": "CCF-B",
+    "abbr": "CCFTPCI"
+  },
+  "CCS ACM Conference on Computer and Communications Security": {
+    "tag": "CCF-A",
+    "abbr": "AsiaCCS"
+  },
+  "Chinese Conference on Pattern Recognition and Computer Vision": {
+    "tag": "CCF-C",
+    "abbr": "PRCV"
+  },
+  "CODASPY Conference on Data and Application Security and Privacy": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Cognition": {
+    "tag": "CCF-B",
+    "abbr": "Cognition"
+  },
+  "Computational Complexity": {
+    "tag": "CCF-B",
+    "abbr": "CC"
+  },
+  "Computational Geometry: Theory and Applications": {
+    "tag": "CCF-C",
+    "abbr": "CGTA"
+  },
+  "Computational Intelligence": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Computational Linguistics": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "Computational Visual Media": {
+    "tag": "CCF-C",
+    "abbr": "CVM"
+  },
+  "Computer Aided Geometric Design": {
+    "tag": "CCF-B",
+    "abbr": "CAGD"
+  },
+  "Computer animation & virtual worlds": {
+    "tag": "CCF-C",
+    "abbr": "CAVW"
+  },
+  "Computer Communications": {
+    "tag": "CCF-C",
+    "abbr": "CC"
+  },
+  "Computer Graphics Forum": {
+    "tag": "CCF-B",
+    "abbr": "CGF"
+  },
+  "Computer Graphics International": {
+    "tag": "CCF-C",
+    "abbr": "CGI"
+  },
+  "Computer Languages, Systems and Structures": {
+    "tag": "CCF-C",
+    "abbr": "CL"
+  },
+  "Computer Law & Security Review": {
+    "tag": "CCF-C",
+    "abbr": "CLSR"
+  },
+  "Computer Networks": {
+    "tag": "CCF-B",
+    "abbr": "CN"
+  },
+  "Computer Science Logic": {
+    "tag": "CCF-C",
+    "abbr": "CSL"
+  },
+  "Computer Speech & Language": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Computer Supported Cooperative Work": {
+    "tag": "CCF-B",
+    "abbr": "CSCW"
+  },
+  "Computer Vision and Image Understanding": {
+    "tag": "CCF-B",
+    "abbr": "CVIU"
+  },
+  "Computer-Aided Design": {
+    "tag": "CCF-B",
+    "abbr": "CAD"
+  },
+  "Computers & Graphics": {
+    "tag": "CCF-C",
+    "abbr": "C&G"
+  },
+  "Computers & Security": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "Concurrency and Computation: Practice and Experience": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Conference of the International Speech Communication Association": {
+    "tag": "CCF-B",
+    "abbr": "INTER- SPEECH"
+  },
+  "Conference on Automated Deduction": {
+    "tag": "CCF-B",
+    "abbr": "CADE"
+  },
+  "Conference on Computational Complexity": {
+    "tag": "CCF-B",
+    "abbr": "CCC"
+  },
+  "Conference on Computational Natural Language Learning": {
+    "tag": "CCF-C",
+    "abbr": "CoNLL"
+  },
+  "Conference on Detection of Intrusions and Malware & Vulnerability Assessment": {
+    "tag": "CCF-C",
+    "abbr": "DIMVA"
+  },
+  "Conference on Empirical Methods in Natural Language Processing": {
+    "tag": "CCF-B",
+    "abbr": "EMNLP"
+  },
+  "Conference on Green, Pervasive and Cloud Computing": {
+    "tag": "CCF-C",
+    "abbr": "GPC"
+  },
+  "Conference on Innovative Data Systems Research": {
+    "tag": "CCF-B",
+    "abbr": "CIDR"
+  },
+  "Conference on Neural Information Processing Systems": {
+    "tag": "CCF-A",
+    "abbr": "NeurIPS"
+  },
+  "Conference on Object-Oriented Programming Systems, Languages, and Applications": {
+    "tag": "CCF-A",
+    "abbr": "OOPSLA"
+  },
+  "Conference on Uncertainty in Artificial Intelligence": {
+    "tag": "CCF-B",
+    "abbr": "UAI"
+  },
+  "Conference on Web and Internet Economics": {
+    "tag": "CCF-B",
+    "abbr": "WINE"
+  },
+  "Connection Science": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "CSCloud International Conference on Cyber Security and Cloud Computing IEEE CSCloud Steering Committee": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Cybernetics and Systems": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Cybersecurity": {
+    "tag": "CCF-B",
+    "abbr": "Cybersecurity"
+  },
+  "DAI International Conference on Distributed Artificial Intelligence ACM/": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Data & Knowledge Engineering": {
+    "tag": "CCF-B",
+    "abbr": "DKE"
+  },
+  "Data Compression Conference": {
+    "tag": "CCF-B",
+    "abbr": "DCC"
+  },
+  "Data Mining and Knowledge Discovery": {
+    "tag": "CCF-B",
+    "abbr": "DMKD"
+  },
+  "Data Science and Engineering": {
+    "tag": "CCF-B",
+    "abbr": "DSE"
+  },
+  "Decision Support Systems": {
+    "tag": "CCF-C",
+    "abbr": "DSS"
+  },
+  "Design Automation Conference": {
+    "tag": "CCF-A",
+    "abbr": "DAC"
+  },
+  "Design, Automation & Test in Europe": {
+    "tag": "CCF-B",
+    "abbr": "DATE"
+  },
+  "Designs, Codes and Cryptography": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "Digital Forensic Research Workshop": {
+    "tag": "CCF-C",
+    "abbr": "DFRWS"
+  },
+  "Discover Computing （原 Information Retrieval Journal）": {
+    "tag": "CCF-C",
+    "abbr": "（原IR）"
+  },
+  "Discrete & Computational Geometry": {
+    "tag": "CCF-C",
+    "abbr": "DCG"
+  },
+  "Discrete Applied Mathematics": {
+    "tag": "CCF-C",
+    "abbr": "DAM"
+  },
+  "Distributed and Parallel Databases": {
+    "tag": "CCF-C",
+    "abbr": "DPD"
+  },
+  "Distributed Computing": {
+    "tag": "CCF-C",
+    "abbr": "DC"
+  },
+  "Empirical Software Engineering": {
+    "tag": "CCF-B",
+    "abbr": "ESE"
+  },
+  "Engineering Applications of Artificial Intelligence": {
+    "tag": "CCF-C",
+    "abbr": "EAAI"
+  },
+  "ENGINEERING Information Technology & Electronic Engineering （原 Frontiers of Information Technology & Electronic Engineering）": {
+    "tag": "CCF-C",
+    "abbr": "EITEE （原FITEE）"
+  },
+  "EURASIP Journal on Information Security": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Euro-Par European Conference on Parallel and Distributed Computing Springer": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "Eurographics Conference on Visualization": {
+    "tag": "CCF-B",
+    "abbr": "EuroVis"
+  },
+  "Eurographics Symposium on Geometry Processing": {
+    "tag": "CCF-B",
+    "abbr": "SGP"
+  },
+  "Eurographics Symposium on Rendering": {
+    "tag": "CCF-B",
+    "abbr": "EGSR"
+  },
+  "European Conference on Artificial Intelligence": {
+    "tag": "CCF-B",
+    "abbr": "ECAI"
+  },
+  "European Conference on Computer Supported Cooperative Work": {
+    "tag": "CCF-B",
+    "abbr": "ECSCW"
+  },
+  "European Conference on Computer Systems": {
+    "tag": "CCF-A",
+    "abbr": "EuroSys"
+  },
+  "European Conference on Computer Vision": {
+    "tag": "CCF-B",
+    "abbr": "ECCV"
+  },
+  "European Conference on Information Retrieval": {
+    "tag": "CCF-C",
+    "abbr": "ECIR"
+  },
+  "European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases": {
+    "tag": "CCF-B",
+    "abbr": "ECML-PKDD"
+  },
+  "European Conference on Object-Oriented Programming": {
+    "tag": "CCF-B",
+    "abbr": "ECOOP"
+  },
+  "European Joint Conferences on Theory and Practice of Software": {
+    "tag": "CCF-B",
+    "abbr": "ETAPS"
+  },
+  "European Journal of Information Systems": {
+    "tag": "CCF-B",
+    "abbr": "EJIS"
+  },
+  "European Symposium on Algorithms": {
+    "tag": "CCF-B",
+    "abbr": "ESA"
+  },
+  "European Symposium on Research in Computer Security": {
+    "tag": "CCF-B",
+    "abbr": "ESORICS"
+  },
+  "EuroS&P IEEE European Symposium on Security and Privacy": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Evolutionary Computation": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "Expert Systems": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Expert Systems with Applications": {
+    "tag": "CCF-C",
+    "abbr": "ESWA"
+  },
+  "Extended Semantic Web Conference": {
+    "tag": "CCF-C",
+    "abbr": "ESWC"
+  },
+  "Fast Software Encryption": {
+    "tag": "CCF-B",
+    "abbr": "FSE"
+  },
+  "Financial Cryptography and Data Security": {
+    "tag": "CCF-C",
+    "abbr": "FC"
+  },
+  "Formal Aspects of Computing": {
+    "tag": "CCF-B",
+    "abbr": "FAC"
+  },
+  "Formal Methods in Computer-Aided Design": {
+    "tag": "CCF-B",
+    "abbr": "FMCAD"
+  },
+  "Formal Methods in System Design": {
+    "tag": "CCF-B",
+    "abbr": "FMSD"
+  },
+  "Foundations of Software Technology and Theoretical Computer Science": {
+    "tag": "CCF-C",
+    "abbr": "FSTTCS"
+  },
+  "FPT International Conference on Field-Programmable Technology": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Frontiers of Computer Science": {
+    "tag": "CCF-B",
+    "abbr": "FCS"
+  },
+  "FSQ Requirements Engineering: Foundation for Software Quality": {
+    "tag": "CCF-C",
+    "abbr": "RE"
+  },
+  "Fundamenta Informaticae": {
+    "tag": "CCF-C",
+    "abbr": "FUIN"
+  },
+  "Future Generation Computer Systems": {
+    "tag": "CCF-C",
+    "abbr": "FGCS"
+  },
+  "Fuzzy Sets and Systems": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Genetic and Evolutionary Computation Conference": {
+    "tag": "CCF-C",
+    "abbr": "GECCO"
+  },
+  "GeoInformatica": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "Geometric Modeling and Processing": {
+    "tag": "CCF-C",
+    "abbr": "GMP"
+  },
+  "Graphical Models": {
+    "tag": "CCF-C",
+    "abbr": "GMOD"
+  },
+  "Graphics Interface": {
+    "tag": "CCF-C",
+    "abbr": "GI"
+  },
+  "Great Lakes Symposium on VLSI": {
+    "tag": "CCF-C",
+    "abbr": "GLSVLSI"
+  },
+  "GRID IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing": {
+    "tag": "CCF-C",
+    "abbr": "CC"
+  },
+  "High-Confidence Computing": {
+    "tag": "CCF-C",
+    "abbr": "HCC"
+  },
+  "Hot Chips: A Symposium on High Performance Chips": {
+    "tag": "CCF-B",
+    "abbr": "HOT CHIPS"
+  },
+  "HOTI IEEE Symposium on High-Performance Interconnects": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "HotNets ACM The Workshop on Hot Topics in Networks": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "HotOS USENIX Workshop on Hot Topics in Operating Systems": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "HotSec USENIX Workshop on Hot Topics in Security": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "HotStorage HotStorage": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "HR Journal of Speech, Language, and Hearing Research American Speech- Language Hearing Association": {
+    "tag": "CCF-B",
+    "abbr": "JSL"
+  },
+  "Human-Computer Interaction": {
+    "tag": "CCF-B",
+    "abbr": "HCI"
+  },
+  "ICA3PP International Conference on Algorithms and Architectures for Parallel Processing": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "ICDAR International Conference on Document Analysis and Recognition": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "ICDF2C International Conference on Digital Forensics & Cyber Crime": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "ICIG International Conference on Image and Graphics": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "ICONIP International Conference on Neural Information Processing": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "ICPADS International Conference on Parallel and Distributed Systems": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "ICPP International Conference on Parallel Processing": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "ICPR International Conference on Pattern Recognition": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "ICS International Conference on Supercomputing": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "ICSME International Conference on Software Maintenance and Evolution": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "ICSR International Conference on Software Reuse": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "ICWE International Conference on Web Engineering": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "ICWS IEEE International Conference on Web Services": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "IDA Intelligent Data Analysis": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "IEEE Annual Symposium on Foundations of Computer Science": {
+    "tag": "CCF-A",
+    "abbr": "FOCS"
+  },
+  "IEEE Asian Test Symposium": {
+    "tag": "CCF-C",
+    "abbr": "ATS"
+  },
+  "IEEE CEC Congress on Evolutionary Computation": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "IEEE Computer Security Foundations Workshop": {
+    "tag": "CCF-B",
+    "abbr": "CSFW"
+  },
+  "IEEE Conference on Local Computer Networks": {
+    "tag": "CCF-C",
+    "abbr": "LCN"
+  },
+  "IEEE Conference on Virtual Reality and 3D User Interfaces （原 IEEE Virtual Reality）": {
+    "tag": "CCF-A",
+    "abbr": "VR"
+  },
+  "IEEE European Test Symposium": {
+    "tag": "CCF-C",
+    "abbr": "ETS"
+  },
+  "IEEE Geoscience and Remote Sensing Letters": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "IEEE Global Communications Conference": {
+    "tag": "CCF-C",
+    "abbr": "GLOBECOM"
+  },
+  "IEEE International Conference on Acoustics, Speech and Signal Processing": {
+    "tag": "CCF-B",
+    "abbr": "ICASSP"
+  },
+  "IEEE International Conference on Application-Specific Systems, Architectures, and Processors": {
+    "tag": "CCF-C",
+    "abbr": "ASAP"
+  },
+  "IEEE International Conference on Automatic Face and Gesture Recognition": {
+    "tag": "CCF-C",
+    "abbr": "FG"
+  },
+  "IEEE International Conference on Big Data": {
+    "tag": "CCF-C",
+    "abbr": "IEEEBigData"
+  },
+  "IEEE International Conference on Bioinformatics and Biomedicine": {
+    "tag": "CCF-B",
+    "abbr": "BIBM"
+  },
+  "IEEE International Conference on Cloud Computing": {
+    "tag": "CCF-C",
+    "abbr": "IEEECLOUD"
+  },
+  "IEEE International Conference on Cluster Computing": {
+    "tag": "CCF-B",
+    "abbr": "CLUSTER"
+  },
+  "IEEE International Conference on Communications": {
+    "tag": "CCF-C",
+    "abbr": "ICC"
+  },
+  "IEEE International Conference on Computer Communications": {
+    "tag": "CCF-A",
+    "abbr": "INFOCOM"
+  },
+  "IEEE International Conference on Computer Communications and Networks": {
+    "tag": "CCF-C",
+    "abbr": "ICCCN"
+  },
+  "IEEE International Conference on Data Engineering": {
+    "tag": "CCF-A",
+    "abbr": "ICDE"
+  },
+  "IEEE International Conference on Data Mining": {
+    "tag": "CCF-B",
+    "abbr": "ICDM"
+  },
+  "IEEE International Conference on Data Science and Advanced Analytics": {
+    "tag": "CCF-C",
+    "abbr": "DSAA"
+  },
+  "IEEE International Conference on Distributed Computing Systems": {
+    "tag": "CCF-B",
+    "abbr": "ICDCS"
+  },
+  "IEEE International Conference on High Performance Computing and Communications": {
+    "tag": "CCF-C",
+    "abbr": "HPCC"
+  },
+  "IEEE International Conference on High Performance Computing, Data and Analytics": {
+    "tag": "CCF-C",
+    "abbr": "HiPC"
+  },
+  "IEEE International Conference on Image Processing": {
+    "tag": "CCF-C",
+    "abbr": "ICIP"
+  },
+  "IEEE International Conference on Mobile Adhoc and Sensor Systems": {
+    "tag": "CCF-C",
+    "abbr": "MASS"
+  },
+  "IEEE International Conference on Multimedia & Expo": {
+    "tag": "CCF-B",
+    "abbr": "ICME"
+  },
+  "IEEE International Conference on Network Protocols": {
+    "tag": "CCF-B",
+    "abbr": "ICNP"
+  },
+  "IEEE International Conference on Peer-to-Peer Computing": {
+    "tag": "CCF-C",
+    "abbr": "P2P"
+  },
+  "IEEE International Conference on Pervasive Computing and Communications": {
+    "tag": "CCF-B",
+    "abbr": "PERCOM"
+  },
+  "IEEE International Conference on Program Comprehension": {
+    "tag": "CCF-B",
+    "abbr": "ICPC"
+  },
+  "IEEE International Conference on Robotics and Automation": {
+    "tag": "CCF-B",
+    "abbr": "ICRA"
+  },
+  "IEEE International Conference on Sensing, Communication, and Networking": {
+    "tag": "CCF-B",
+    "abbr": "SECON"
+  },
+  "IEEE International Conference on Software Services Engineering": {
+    "tag": "CCF-C",
+    "abbr": "SSE"
+  },
+  "IEEE International Conference on Software Testing, Verification and Validation": {
+    "tag": "CCF-C",
+    "abbr": "ICST"
+  },
+  "IEEE International Conference on Systems, Man, and Cybernetics": {
+    "tag": "CCF-C",
+    "abbr": "SMC"
+  },
+  "IEEE International Conference on Tools with Artificial Intelligence": {
+    "tag": "CCF-C",
+    "abbr": "ICTAI"
+  },
+  "IEEE International Conference on Trust, Security and Privacy in Computing and Communications": {
+    "tag": "CCF-C",
+    "abbr": "TrustCom"
+  },
+  "IEEE International Conference on Ubiquitous Intelligence and Computing": {
+    "tag": "CCF-C",
+    "abbr": "UIC"
+  },
+  "IEEE International Performance Computing and Communications Conference": {
+    "tag": "CCF-C",
+    "abbr": "IPCCC"
+  },
+  "IEEE International Requirements Engineering Conference": {
+    "tag": "CCF-B",
+    "abbr": "RE"
+  },
+  "IEEE International Semantic Web Conference": {
+    "tag": "CCF-B",
+    "abbr": "ISWC"
+  },
+  "IEEE International Symposium on a World of Wireless, Mobile and Multimedia Networks": {
+    "tag": "CCF-C",
+    "abbr": "WoWMoM"
+  },
+  "IEEE International Symposium on High Performance Computer Architecture": {
+    "tag": "CCF-A",
+    "abbr": "HPCA"
+  },
+  "IEEE International Symposium on Performance Analysis of Systems and Software": {
+    "tag": "CCF-C",
+    "abbr": "ISPASS"
+  },
+  "IEEE International Symposium on Reliable Distributed Systems": {
+    "tag": "CCF-B",
+    "abbr": "SRDS"
+  },
+  "IEEE International Working Conference on Source Code Analysis and Manipulation": {
+    "tag": "CCF-C",
+    "abbr": "SCAM"
+  },
+  "IEEE Internet of Things Journal": {
+    "tag": "CCF-C",
+    "abbr": "IOT"
+  },
+  "IEEE Journal of Biomedical and Health Informatics": {
+    "tag": "CCF-C",
+    "abbr": "JBHI"
+  },
+  "IEEE Journal on Selected Areas in Communications": {
+    "tag": "CCF-A",
+    "abbr": "JSAC"
+  },
+  "IEEE Pacific Visualization Symposium": {
+    "tag": "CCF-C",
+    "abbr": "PacificVis"
+  },
+  "IEEE Real-Time Systems Symposium": {
+    "tag": "CCF-A",
+    "abbr": "RTSS"
+  },
+  "IEEE Signal Processing Letters": {
+    "tag": "CCF-C",
+    "abbr": "SPL"
+  },
+  "IEEE Symposium on Computers and Communications": {
+    "tag": "CCF-C",
+    "abbr": "ISCC"
+  },
+  "IEEE Symposium on Field-Programmable Custom Computing Machines": {
+    "tag": "CCF-C",
+    "abbr": "FCCM"
+  },
+  "IEEE Symposium on Security and Privacy": {
+    "tag": "CCF-A",
+    "abbr": "S&P"
+  },
+  "IEEE Transactions on Affective Computing": {
+    "tag": "CCF-B",
+    "abbr": "TAC"
+  },
+  "IEEE Transactions on Audio, Speech and Language Processing （原 IEEE/ACM Transactions on Audio, Speech and Language Processing）": {
+    "tag": "CCF-B",
+    "abbr": "TASLP"
+  },
+  "IEEE Transactions on Automation Science and Engineering": {
+    "tag": "CCF-B",
+    "abbr": "TASAE"
+  },
+  "IEEE Transactions on Big Data": {
+    "tag": "CCF-C",
+    "abbr": "TBD"
+  },
+  "IEEE Transactions on Circuits and Systems for Video Technology": {
+    "tag": "CCF-B",
+    "abbr": "TCSVT"
+  },
+  "IEEE Transactions on Circuits and Systems I: Regular Papers": {
+    "tag": "CCF-C",
+    "abbr": "TCASI"
+  },
+  "IEEE Transactions on Cloud Computing": {
+    "tag": "CCF-B",
+    "abbr": "TCC"
+  },
+  "IEEE Transactions on Communications": {
+    "tag": "CCF-B",
+    "abbr": "TCOM"
+  },
+  "IEEE Transactions on Computational Social Systems": {
+    "tag": "CCF-C",
+    "abbr": "TCSS"
+  },
+  "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems": {
+    "tag": "CCF-A",
+    "abbr": "TCAD"
+  },
+  "IEEE Transactions on Computers": {
+    "tag": "CCF-A",
+    "abbr": "TC"
+  },
+  "IEEE Transactions on Cybernetics": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "IEEE Transactions on Dependable and Secure Computing": {
+    "tag": "CCF-A",
+    "abbr": "TDSC"
+  },
+  "IEEE Transactions on Evolutionary Computation": {
+    "tag": "CCF-B",
+    "abbr": "TEC"
+  },
+  "IEEE Transactions on Fuzzy Systems": {
+    "tag": "CCF-B",
+    "abbr": "TFS"
+  },
+  "IEEE Transactions on Games": {
+    "tag": "CCF-C",
+    "abbr": "TG"
+  },
+  "IEEE Transactions on Geoscience and Remote Sensing": {
+    "tag": "CCF-B",
+    "abbr": "TGARS"
+  },
+  "IEEE Transactions on Human-Machine Systems": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "IEEE Transactions on Image Processing": {
+    "tag": "CCF-A",
+    "abbr": "TIP"
+  },
+  "IEEE Transactions on Industrial Informatics": {
+    "tag": "CCF-C",
+    "abbr": "TII"
+  },
+  "IEEE Transactions on Information Forensics and Security": {
+    "tag": "CCF-A",
+    "abbr": "TIFS"
+  },
+  "IEEE Transactions on Information Theory": {
+    "tag": "CCF-A",
+    "abbr": "TIT"
+  },
+  "IEEE Transactions on Intelligent Transportation Systems": {
+    "tag": "CCF-B",
+    "abbr": "TITS"
+  },
+  "IEEE Transactions on Knowledge and Data Engineering": {
+    "tag": "CCF-A",
+    "abbr": "TKDE"
+  },
+  "IEEE Transactions on Medical Imaging": {
+    "tag": "CCF-B",
+    "abbr": "TMI"
+  },
+  "IEEE Transactions on Mobile Computing": {
+    "tag": "CCF-A",
+    "abbr": "TMC"
+  },
+  "IEEE Transactions on Multimedia": {
+    "tag": "CCF-A",
+    "abbr": "TMM"
+  },
+  "IEEE Transactions on Network and Service Management": {
+    "tag": "CCF-C",
+    "abbr": "TNSM"
+  },
+  "IEEE Transactions on Networking （原 IEEE/ACM Transactions on Networking）": {
+    "tag": "CCF-A",
+    "abbr": "TON"
+  },
+  "IEEE Transactions on Neural Networks and learning systems": {
+    "tag": "CCF-B",
+    "abbr": "TNNLS"
+  },
+  "IEEE Transactions on Parallel and Distributed Systems": {
+    "tag": "CCF-A",
+    "abbr": "TPDS"
+  },
+  "IEEE Transactions on Pattern Analysis and Machine Intelligence": {
+    "tag": "CCF-A",
+    "abbr": "TPAMI"
+  },
+  "IEEE Transactions on Reliability": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "IEEE Transactions on Robotics": {
+    "tag": "CCF-B",
+    "abbr": "TR"
+  },
+  "IEEE Transactions on Services Computing": {
+    "tag": "CCF-A",
+    "abbr": "TSC"
+  },
+  "IEEE Transactions on Software Engineering": {
+    "tag": "CCF-A",
+    "abbr": "TSE"
+  },
+  "IEEE Transactions on Sustainable Computing": {
+    "tag": "CCF-C",
+    "abbr": "TSUSC"
+  },
+  "IEEE Transactions on Systems, Man,and Cybernetics: Systems": {
+    "tag": "CCF-B",
+    "abbr": "TSMC"
+  },
+  "IEEE Transactions on Very Large Scale Integration (VLSI) Systems": {
+    "tag": "CCF-B",
+    "abbr": "TVLSI"
+  },
+  "IEEE Transactions on Visualization and Computer Graphics": {
+    "tag": "CCF-A",
+    "abbr": "TVCG"
+  },
+  "IEEE Transactions on Wireless Communications": {
+    "tag": "CCF-B",
+    "abbr": "TWC"
+  },
+  "IEEE Visualization Conference": {
+    "tag": "CCF-A",
+    "abbr": "IEEEVIS"
+  },
+  "IEEE Wireless Communications and Networking Conference": {
+    "tag": "CCF-C",
+    "abbr": "WCNC"
+  },
+  "IEEE World Haptics Conference": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "IEEE/ACM International Symposium on Microarchitecture": {
+    "tag": "CCF-A",
+    "abbr": "MICRO"
+  },
+  "IEEE/ACM International Workshop on Quality of Service": {
+    "tag": "CCF-B",
+    "abbr": "IWQoS"
+  },
+  "IEEE/ACM Transactions on Computational Biology and Bioinformatics": {
+    "tag": "CCF-B",
+    "abbr": "TCBB"
+  },
+  "IEEE/CVF Computer Vision and Pattern Recognition Conference": {
+    "tag": "CCF-A",
+    "abbr": "CVPR"
+  },
+  "IEEE\\RSJ International Conference on Intelligent Robots and Systems": {
+    "tag": "CCF-C",
+    "abbr": "IROS"
+  },
+  "IET Communications": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "IET Computer Vision": {
+    "tag": "CCF-C",
+    "abbr": "IET-CVI"
+  },
+  "IET Image Processing": {
+    "tag": "CCF-C",
+    "abbr": "IET-IPR"
+  },
+  "IET Information Security": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "IET Intelligent Transport Systems": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "IET Software": {
+    "tag": "CCF-B",
+    "abbr": "IETS"
+  },
+  "IFIP International Information Security Conference": {
+    "tag": "CCF-C",
+    "abbr": "SEC"
+  },
+  "IFIP WG 11.9 IFIP Working Group 11.9 International Conference on Digital Forensics": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "ignal Processing": {
+    "tag": "CCF-C",
+    "abbr": "IETS"
+  },
+  "IJCB International Joint Conference on Biometrics": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "IJCIA International Journal of Computational Intelligence and Applications": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "IJCNN International Joint Conference on Neural Networks": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "IJDAR International Journal on Document Analysis and Recognition": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "IJNS International Journal of Neural Systems": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "IJPRAI International Journal of Pattern Recognition and Artificial Intelligence": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "IJUFKS International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "ILP International Conference on Inductive Logic Programming": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "IM IFIP/IEEE International Symposium on Integrated Network Management": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Information & Management": {
+    "tag": "CCF-C",
+    "abbr": "I&M"
+  },
+  "Information and Computation": {
+    "tag": "CCF-A",
+    "abbr": "IANDC"
+  },
+  "Information and Computer Security": {
+    "tag": "CCF-C",
+    "abbr": "IMCS"
+  },
+  "Information and Software Technology": {
+    "tag": "CCF-B",
+    "abbr": "IST"
+  },
+  "Information Processing and Management": {
+    "tag": "CCF-B",
+    "abbr": "IPM"
+  },
+  "Information Processing Letters": {
+    "tag": "CCF-C",
+    "abbr": "IPL"
+  },
+  "Information Sciences": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "Information Systems": {
+    "tag": "CCF-B",
+    "abbr": "IS"
+  },
+  "INFORMS Journal on Computing": {
+    "tag": "CCF-B",
+    "abbr": "INFORMS"
+  },
+  "Inscrypt International Conference on Information Security and Cryptology": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Integration, the VLSI Journal": {
+    "tag": "CCF-C",
+    "abbr": "Integration"
+  },
+  "Interacting with Computers": {
+    "tag": "CCF-B",
+    "abbr": "IWC"
+  },
+  "International ACM SIGACCESS Conference on Computers and Accessibility": {
+    "tag": "CCF-C",
+    "abbr": "ASSETS"
+  },
+  "International ACM SIGIR Conference on Research and Development in Information Retrieval": {
+    "tag": "CCF-A",
+    "abbr": "SIGIR"
+  },
+  "International Colloquium on Automata, Languages and Programming": {
+    "tag": "CCF-B",
+    "abbr": "ICALP"
+  },
+  "International Colloquium on Theoretical Aspects of Computing": {
+    "tag": "CCF-C",
+    "abbr": "ICTAC"
+  },
+  "International Computer Software and Applications Conference": {
+    "tag": "CCF-C",
+    "abbr": "COMPSAC"
+  },
+  "International Computing and Combinatorics Conference": {
+    "tag": "CCF-B",
+    "abbr": "COCOON"
+  },
+  "International Conference for High Performance Computing, Networking, Storage, and Analysis": {
+    "tag": "CCF-A",
+    "abbr": "SC"
+  },
+  "International Conference on 3D Vision": {
+    "tag": "CCF-C",
+    "abbr": "3DV"
+  },
+  "International Conference on Advanced Data Mining and Applications": {
+    "tag": "CCF-C",
+    "abbr": "ADMA"
+  },
+  "International Conference on Advanced Information Systems Engineering": {
+    "tag": "CCF-B",
+    "abbr": "CAiSE"
+  },
+  "International Conference on Algorithmic Learning Theory": {
+    "tag": "CCF-C",
+    "abbr": "ALT"
+  },
+  "International Conference on Applied Cryptography and Network Security": {
+    "tag": "CCF-C",
+    "abbr": "ACNS"
+  },
+  "International Conference on Architectural Support for Programming Languages and Operating Systems": {
+    "tag": "CCF-A",
+    "abbr": "ASPLOS"
+  },
+  "International Conference on Artificial Intelligence and Statistics": {
+    "tag": "CCF-C",
+    "abbr": "AISTATS"
+  },
+  "International Conference on Artificial Neural Networks": {
+    "tag": "CCF-C",
+    "abbr": "ICANN"
+  },
+  "International Conference on Automated Planning and Scheduling": {
+    "tag": "CCF-B",
+    "abbr": "ICAPS"
+  },
+  "International Conference on Automated Software Engineering": {
+    "tag": "CCF-A",
+    "abbr": "ASE"
+  },
+  "International Conference on Case-Based Reasoning": {
+    "tag": "CCF-B",
+    "abbr": "ICCBR"
+  },
+  "International Conference on Collaborative Computing: Networking, Applications and Worksharing": {
+    "tag": "CCF-C",
+    "abbr": "CollaborateCom"
+  },
+  "International Conference on Compiler Construction": {
+    "tag": "CCF-B",
+    "abbr": "CC"
+  },
+  "International Conference on Computational Linguistics": {
+    "tag": "CCF-B",
+    "abbr": "COLING"
+  },
+  "International Conference on Computer Aided Verification": {
+    "tag": "CCF-A",
+    "abbr": "CAV"
+  },
+  "International Conference on Computer Animation, Social Agents, and Extended Reality （原 International Conference on Computer Animation and Social Agents）": {
+    "tag": "CCF-C",
+    "abbr": "CASAXR （原CASA）"
+  },
+  "International Conference on Computer Design": {
+    "tag": "CCF-B",
+    "abbr": "ICCD"
+  },
+  "International Conference on Computer Supported Cooperative Work in Design": {
+    "tag": "CCF-C",
+    "abbr": "CSCWD"
+  },
+  "International Conference on Computer Vision": {
+    "tag": "CCF-A",
+    "abbr": "ICCV"
+  },
+  "International Conference on Computer-Aided Design": {
+    "tag": "CCF-B",
+    "abbr": "ICCAD"
+  },
+  "International Conference on Computer-Aided Design and Computer Graphics Processing": {
+    "tag": "CCF-C",
+    "abbr": "CAD/Graphics"
+  },
+  "International Conference on Conceptual Modeling": {
+    "tag": "CCF-C",
+    "abbr": "ER"
+  },
+  "International Conference on Concurrency Theory": {
+    "tag": "CCF-B",
+    "abbr": "CONCUR"
+  },
+  "International Conference on Cooperative Information Systems": {
+    "tag": "CCF-C",
+    "abbr": "CoopIS"
+  },
+  "International Conference on Cryptographic Hardware and Embedded Systems": {
+    "tag": "CCF-B",
+    "abbr": "CHES"
+  },
+  "International Conference on Database and Expert System Applications": {
+    "tag": "CCF-C",
+    "abbr": "DEXA"
+  },
+  "International Conference on Database Systems for Advanced Applications": {
+    "tag": "CCF-B",
+    "abbr": "DASFAA"
+  },
+  "International Conference on Database Theory": {
+    "tag": "CCF-B",
+    "abbr": "ICDT"
+  },
+  "International Conference on Dependable Systems and Networks": {
+    "tag": "CCF-B",
+    "abbr": "DSN"
+  },
+  "International Conference on Embedded Software": {
+    "tag": "CCF-B",
+    "abbr": "EMSOFT"
+  },
+  "International Conference on Engineering of Complex Computer Systems": {
+    "tag": "CCF-C",
+    "abbr": "ICECCS"
+  },
+  "International Conference on Evaluation and Assessment in Software Engineering": {
+    "tag": "CCF-C",
+    "abbr": "EASE"
+  },
+  "International Conference on Extending Database Technology": {
+    "tag": "CCF-B",
+    "abbr": "EDBT"
+  },
+  "International Conference on Field-Programmable Logic and Applications": {
+    "tag": "CCF-C",
+    "abbr": "FPL"
+  },
+  "International Conference on Formal Engineering Methods": {
+    "tag": "CCF-C",
+    "abbr": "ICFEM"
+  },
+  "International Conference on Formal Structures for Computation and Deduction": {
+    "tag": "CCF-C",
+    "abbr": "FSCD （原RTA）"
+  },
+  "International Conference on Formal Techniques for Distributed Objects, Components, and Systems": {
+    "tag": "CCF-C",
+    "abbr": "FORTE"
+  },
+  "International Conference on Hardware/Software Co-design and System Synthesis": {
+    "tag": "CCF-B",
+    "abbr": "CODES+ ISSS"
+  },
+  "International Conference on High Performance and Embedded Architectures and Compilers": {
+    "tag": "CCF-B",
+    "abbr": "HiPEAC"
+  },
+  "International Conference on Human- Computer Interaction of International Federation for Information Processing": {
+    "tag": "CCF-C",
+    "abbr": "INTERACT"
+  },
+  "International Conference on Hybrid Systems: Computation and Control": {
+    "tag": "CCF-B",
+    "abbr": "HSCC"
+  },
+  "International Conference on Information Processing in Sensor Networks": {
+    "tag": "CCF-B",
+    "abbr": "IPSN"
+  },
+  "International Conference on Integer Programming and Combinatorial Optimization": {
+    "tag": "CCF-C",
+    "abbr": "IPCO"
+  },
+  "International Conference on Intelligent Computing": {
+    "tag": "CCF-C",
+    "abbr": "ICIC"
+  },
+  "International conference on Intelligent Systems for Molecular Biology": {
+    "tag": "CCF-B",
+    "abbr": "ISMB"
+  },
+  "International Conference on Learning Representations": {
+    "tag": "CCF-A",
+    "abbr": "ICLR"
+  },
+  "International Conference on Machine Learning": {
+    "tag": "CCF-A",
+    "abbr": "ICML"
+  },
+  "International Conference on Mathematical Foundations of Computer Science": {
+    "tag": "CCF-C",
+    "abbr": "MFCS"
+  },
+  "International Conference on Medical Image Computing and Computer-Assisted Intervention": {
+    "tag": "CCF-B",
+    "abbr": "MICCAI"
+  },
+  "International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services": {
+    "tag": "CCF-C",
+    "abbr": "MobiQuitous"
+  },
+  "International Conference on Mobile Data Management": {
+    "tag": "CCF-C",
+    "abbr": "MDM"
+  },
+  "International Conference on Multimedia Modeling": {
+    "tag": "CCF-C",
+    "abbr": "MMM"
+  },
+  "International Conference on Principles and Practice of Constraint Programming": {
+    "tag": "CCF-B",
+    "abbr": "CP"
+  },
+  "International Conference on Principles of Knowledge Representation and Reasoning": {
+    "tag": "CCF-B",
+    "abbr": "KR"
+  },
+  "International Conference on Scientific and Statistical Database Management": {
+    "tag": "CCF-C",
+    "abbr": "SSDBM"
+  },
+  "International Conference on Service Oriented Computing": {
+    "tag": "CCF-B",
+    "abbr": "ICSOC"
+  },
+  "International Conference on Service Science": {
+    "tag": "CCF-C",
+    "abbr": "ICSS"
+  },
+  "International Conference on Software and System Process": {
+    "tag": "CCF-C",
+    "abbr": "ICSSP"
+  },
+  "International Conference on Software Engineering": {
+    "tag": "CCF-A",
+    "abbr": "ICSE"
+  },
+  "International Conference on Spatial Information Theory": {
+    "tag": "CCF-C",
+    "abbr": "COSIT"
+  },
+  "International Conference on the Theory and Applications of Cryptographic Techniques": {
+    "tag": "CCF-A",
+    "abbr": "EUROCRYPT"
+  },
+  "International Conference on Theory and Applications of Satisfiability Testing": {
+    "tag": "CCF-B",
+    "abbr": "SAT"
+  },
+  "International Conference on Very Large Data Bases": {
+    "tag": "CCF-A",
+    "abbr": "VLDB"
+  },
+  "International Conference on Web Age Information Management": {
+    "tag": "CCF-C",
+    "abbr": "WAIM"
+  },
+  "International Cryptology Conference": {
+    "tag": "CCF-A",
+    "abbr": "CRYPTO"
+  },
+  "International Joint Conference on Artificial Intelligence": {
+    "tag": "CCF-B",
+    "abbr": "IJCAI"
+  },
+  "International Joint Conference on Autonomous Agents and Multi-agent Systems": {
+    "tag": "CCF-B",
+    "abbr": "AAMAS"
+  },
+  "International Joint Conference on Theoretical Computer Science - Frontier of Algorithmic Wisdom": {
+    "tag": "CCF-C",
+    "abbr": "IJTCS-FAW"
+  },
+  "International Journal of Approximate Reasoning": {
+    "tag": "CCF-B",
+    "abbr": "IJAR"
+  },
+  "International Journal of Computer Vision": {
+    "tag": "CCF-A",
+    "abbr": "IJCV"
+  },
+  "International Journal of Cooperative Information Systems": {
+    "tag": "CCF-C",
+    "abbr": "IJCIS"
+  },
+  "International Journal of Geographical Information Science": {
+    "tag": "CCF-C",
+    "abbr": "IJGIS"
+  },
+  "International Journal of Human-Computer Interaction": {
+    "tag": "CCF-B",
+    "abbr": "IJHCI"
+  },
+  "International Journal of Human-Computer Studies": {
+    "tag": "CCF-A",
+    "abbr": "IJHCS"
+  },
+  "International Journal of Information and Computer Security": {
+    "tag": "CCF-C",
+    "abbr": "IJICS"
+  },
+  "International Journal of Information Security and Privacy": {
+    "tag": "CCF-C",
+    "abbr": "IJISP"
+  },
+  "International Journal of Intelligent Systems": {
+    "tag": "CCF-C",
+    "abbr": "IJIS"
+  },
+  "International Journal of Knowledge Management": {
+    "tag": "CCF-C",
+    "abbr": "IJKM"
+  },
+  "International Journal of Software Engineering and Knowledge Engineering": {
+    "tag": "CCF-C",
+    "abbr": "IJSEKE"
+  },
+  "International Journal of Software Tools for Technology Transfer": {
+    "tag": "CCF-C",
+    "abbr": "STTT"
+  },
+  "International Journal on Semantic Web and Information Systems": {
+    "tag": "CCF-C",
+    "abbr": "IJSWIS"
+  },
+  "International Symposium on Algorithmic Game Theory": {
+    "tag": "CCF-C",
+    "abbr": "SAGT"
+  },
+  "International Symposium on Algorithms and Computation": {
+    "tag": "CCF-C",
+    "abbr": "ISAAC"
+  },
+  "International Symposium on Bioinformatics Research and Applications": {
+    "tag": "CCF-C",
+    "abbr": "ISBRA"
+  },
+  "International Symposium on Computational Geometry": {
+    "tag": "CCF-B",
+    "abbr": "SoCG"
+  },
+  "International Symposium on Computer Architecture": {
+    "tag": "CCF-A",
+    "abbr": "ISCA"
+  },
+  "International Symposium on Formal Methods": {
+    "tag": "CCF-A",
+    "abbr": "FM"
+  },
+  "International Symposium on Mixed and Augmented Reality": {
+    "tag": "CCF-B",
+    "abbr": "ISMAR"
+  },
+  "International Symposium on Modeling, Analysis, and Simulation of Computer and Telecommunication Systems": {
+    "tag": "CCF-C",
+    "abbr": "MASCOTS"
+  },
+  "International Symposium on Recent Advances in Intrusion Detection": {
+    "tag": "CCF-B",
+    "abbr": "RAID"
+  },
+  "International Symposium on Software Engineering: Theories, Tools, and Applications": {
+    "tag": "CCF-C",
+    "abbr": "SETTA"
+  },
+  "International Symposium on Software Testing and Analysis": {
+    "tag": "CCF-A",
+    "abbr": "ISSTA"
+  },
+  "International Symposium on Spatial and Temporal Databases": {
+    "tag": "CCF-C",
+    "abbr": "SSTD"
+  },
+  "International Symposium on Theory, Algorithmic Foundations, and Protocol Design for Mobile Networks and Mobile Computing": {
+    "tag": "CCF-B",
+    "abbr": "MobiHoc"
+  },
+  "International Working Conference on Advanced Visual Interfaces": {
+    "tag": "CCF-C",
+    "abbr": "AVI"
+  },
+  "International Workshop on Network and Operating System Support for Digital Audio and Video": {
+    "tag": "CCF-B",
+    "abbr": "NOSSDAV"
+  },
+  "International Workshop on Practice and Theory in Public Key Cryptography": {
+    "tag": "CCF-B",
+    "abbr": "PKC"
+  },
+  "International Workshop on Web and Databases": {
+    "tag": "CCF-C",
+    "abbr": "WebDB"
+  },
+  "Internetware Asia-Pacific Symposium on Internetware": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "IPDPS IEEE International Parallel & Distributed Processing Symposium": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "ITC International Test Conference": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "ITC-Asia International Test Conference in Asia": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "IVC Image and Vision Computing": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "JAIR Journal of Artificial Intelligence Research": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "JETAI Journal of Experimental and Theoretical Artificial Intelligence": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Journal of Automated Reasoning": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "Journal of Biomedical Informatics": {
+    "tag": "CCF-C",
+    "abbr": "JBI"
+  },
+  "Journal of Complexity": {
+    "tag": "CCF-C",
+    "abbr": "JCOMPLEXI TY"
+  },
+  "Journal of Computer and System Sciences": {
+    "tag": "CCF-B",
+    "abbr": "JCSS"
+  },
+  "Journal of Computer Information Systems": {
+    "tag": "CCF-C",
+    "abbr": "JCIS"
+  },
+  "Journal of Computer Science and Technology": {
+    "tag": "CCF-B",
+    "abbr": "JCST"
+  },
+  "Journal of Computer Security": {
+    "tag": "CCF-B",
+    "abbr": "JCS"
+  },
+  "Journal of Cryptology": {
+    "tag": "CCF-A",
+    "abbr": null
+  },
+  "Journal of Database Management": {
+    "tag": "CCF-C",
+    "abbr": "JDM"
+  },
+  "Journal of Electronic Testing-Theory and Applications": {
+    "tag": "CCF-C",
+    "abbr": "JETTA"
+  },
+  "Journal of Functional Programming": {
+    "tag": "CCF-B",
+    "abbr": "JFP"
+  },
+  "Journal of Global Information Technology Management": {
+    "tag": "CCF-C",
+    "abbr": "JGITM"
+  },
+  "Journal of Global Optimization": {
+    "tag": "CCF-B",
+    "abbr": "JGO"
+  },
+  "Journal of Grid computing": {
+    "tag": "CCF-C",
+    "abbr": "JGC"
+  },
+  "Journal of Information Security and Applications": {
+    "tag": "CCF-C",
+    "abbr": "JISA"
+  },
+  "Journal of Intelligent Information Systems": {
+    "tag": "CCF-C",
+    "abbr": "JIIS"
+  },
+  "Journal of Logic and Computation": {
+    "tag": "CCF-C",
+    "abbr": "LOGCOM"
+  },
+  "Journal of Logical and Algebraic Methods in Programming": {
+    "tag": "CCF-C",
+    "abbr": "JLAMP"
+  },
+  "Journal of Machine Learning Research": {
+    "tag": "CCF-A",
+    "abbr": "JMLR"
+  },
+  "Journal of Network and Computer Applications": {
+    "tag": "CCF-C",
+    "abbr": "JNCA"
+  },
+  "Journal of Parallel and Distributed Computing": {
+    "tag": "CCF-B",
+    "abbr": "JPDC"
+  },
+  "Journal of Software: Evolution and Process": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "Journal of Symbolic Computation": {
+    "tag": "CCF-B",
+    "abbr": "JSC"
+  },
+  "Journal of Systems and Software": {
+    "tag": "CCF-B",
+    "abbr": "JSS"
+  },
+  "Journal of Systems Architecture: Embedded Software Design": {
+    "tag": "CCF-B",
+    "abbr": "JSA"
+  },
+  "Journal of the ACM": {
+    "tag": "CCF-A",
+    "abbr": "JACM"
+  },
+  "Journal of the American Medical Informatics Association": {
+    "tag": "CCF-B",
+    "abbr": "JAMIA"
+  },
+  "Journal of the Association for Information Science and Technology": {
+    "tag": "CCF-B",
+    "abbr": "JASIST"
+  },
+  "Journal of Visual Communication and Image Representation": {
+    "tag": "CCF-C",
+    "abbr": "JVCIR"
+  },
+  "Journal of Web Engineering": {
+    "tag": "CCF-C",
+    "abbr": "JWE"
+  },
+  "Journal of Web Semantics": {
+    "tag": "CCF-B",
+    "abbr": "JWS"
+  },
+  "KBS Knowledge-Based Systems": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Knowledge and Information Systems": {
+    "tag": "CCF-B",
+    "abbr": "KAIS"
+  },
+  "KSEM International conference on Knowledge Science, Engineering and Management": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "L Transactions of the Association for Computational Linguistics The": {
+    "tag": "CCF-B",
+    "abbr": "TAC"
+  },
+  "LISA Large Installation System Administration Conference": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "Logical Methods in Computer Science": {
+    "tag": "CCF-C",
+    "abbr": "LMCS"
+  },
+  "LOPSTR International Symposium on Logic-based Program Synthesis and Transformation": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "LPED International Symposium on Low Power Electronics and Design": {
+    "tag": "CCF-C",
+    "abbr": "IS"
+  },
+  "M International Symposium on Empirical Software Engineering and Measurement": {
+    "tag": "CCF-B",
+    "abbr": "ESE"
+  },
+  "Machine Learning": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "Machine Translation": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Machine Vision and Applications": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Mathematical Structures in Computer Science": {
+    "tag": "CCF-B",
+    "abbr": "MSCS"
+  },
+  "Medical Image Analysis": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "MEMOCODE International Conference on Formal Methods and Models for Co-Design": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Middleware International Middleware Conference ACM/IFIP/": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "Mobile Networks and Applications": {
+    "tag": "CCF-C",
+    "abbr": "MONET"
+  },
+  "Multimedia Systems": {
+    "tag": "CCF-C",
+    "abbr": "MS"
+  },
+  "Multimedia Tools and Applications": {
+    "tag": "CCF-C",
+    "abbr": "MTA"
+  },
+  "N International Conference on Mobility, Sensing and Networking": {
+    "tag": "CCF-C",
+    "abbr": "MS"
+  },
+  "NAS International Conference on Networking, Architecture and Storages": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Natural Computing": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "NCA Neural Computing and Applications": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "NCMMSC National Conference on Man-Machine Speech Communication CCF/中国中 文信息学会": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Network and Distributed System Security Symposium": {
+    "tag": "CCF-A",
+    "abbr": "NDSS"
+  },
+  "Networking IFIP International Conferences on Networking": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Networks": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Neural Computation": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "Neural Networks": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "Neurocomputing": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "NLE Natural Language Engineering": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "North American Chapter of the Association for Computational Linguistics": {
+    "tag": "CCF-B",
+    "abbr": "NAACL"
+  },
+  "NPC IFIP International Conference on Network and Parallel Computing": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "NPL Neural Processing Letters": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "NSPW New Security Paradigms Workshop": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "PA IEEE International Symposium on Parallel and Distributed Processing with Applications": {
+    "tag": "CCF-C",
+    "abbr": "IS"
+  },
+  "PAA Pattern Analysis and Applications": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Pacific Conference onComputer Graphics and Applications": {
+    "tag": "CCF-B",
+    "abbr": "PG"
+  },
+  "Pacific-Asia Conference on Knowledge Discovery and Data Mining": {
+    "tag": "CCF-C",
+    "abbr": "PAKDD"
+  },
+  "PACT International Conference on Parallel Architectures and Compilation Techniques": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "PAM Passive and Active Measurement Conference": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Parallel Computing": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "Parallel Problem Solving from Nature": {
+    "tag": "CCF-B",
+    "abbr": "PPSN"
+  },
+  "PD International Symposium on Physical Design": {
+    "tag": "CCF-C",
+    "abbr": "IS"
+  },
+  "Peer-to-Peer Networking and Applications": {
+    "tag": "CCF-C",
+    "abbr": "PPNA"
+  },
+  "Performance Evaluation: An International Journal": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "Performance International Symposium on Computer Performance, Modeling, Measurements and Evaluation": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "Personal and Ubiquitous Computing": {
+    "tag": "CCF-C",
+    "abbr": "PUC"
+  },
+  "Pervasive and Mobile Computing": {
+    "tag": "CCF-C",
+    "abbr": "PMC"
+  },
+  "PETS Privacy Enhancing Technologies Symposium": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "PLOS Computational Biology": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "PR Pattern Recognition": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "PRICAI Pacific Rim International Conference on Artificial Intelligence": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "PRL Pattern Recognition Letters": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Proceedings of the ACM on Human-Computer Interaction": {
+    "tag": "CCF-C",
+    "abbr": "PACMHCI"
+  },
+  "Proceedings of the ACM on Programming Languages": {
+    "tag": "CCF-C",
+    "abbr": "PACMPL"
+  },
+  "Proceedings of the IEEE": {
+    "tag": "CCF-A",
+    "abbr": "Proc.IEEE"
+  },
+  "QRS International Conference on Software Quality, Reliability and Security": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "R Mining Software Repositories": {
+    "tag": "CCF-C",
+    "abbr": "MS"
+  },
+  "RE IEEE International Symposium on Software Reliability Engineering": {
+    "tag": "CCF-B",
+    "abbr": "ISS"
+  },
+  "Real-Time Systems": {
+    "tag": "CCF-C",
+    "abbr": "RTS"
+  },
+  "Requirements Engineering": {
+    "tag": "CCF-B",
+    "abbr": "RE"
+  },
+  "RTAS IEEE Real-Time and Embedded Technology and Applications Symposium": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "RV International Conference on Runtime Verification": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "S ACM Transactions on Interactive Intelligent Systems": {
+    "tag": "CCF-C",
+    "abbr": "TII"
+  },
+  "S IEEE International Symposium on Circuits and Systems": {
+    "tag": "CCF-B",
+    "abbr": "ISCA"
+  },
+  "S International Conference on Information and Communications Security": {
+    "tag": "CCF-C",
+    "abbr": "ICIC"
+  },
+  "SAC Selected Areas in Cryptography": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "SANER IEEE International Conference on Software Analysis, Evolution, and Reengineering": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "SAS International Static Analysis Symposium": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "Science China Information Sciences": {
+    "tag": "CCF-A",
+    "abbr": "SCIS"
+  },
+  "Science of Computer Programming": {
+    "tag": "CCF-B",
+    "abbr": "SCP"
+  },
+  "SecureComm International Conference on Security and Privacy in Communication Networks": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Security and Communication Networks": {
+    "tag": "CCF-C",
+    "abbr": "SCN"
+  },
+  "SEKE International Conference on Software Engineering and Knowledge Engineering KSI": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Service Oriented Computing and Applications": {
+    "tag": "CCF-C",
+    "abbr": "SOCA"
+  },
+  "Shape Modeling International": {
+    "tag": "CCF-C",
+    "abbr": "SMI"
+  },
+  "SIAM International Conference on Data Mining": {
+    "tag": "CCF-B",
+    "abbr": "SDM"
+  },
+  "SIAM Journal on Computing": {
+    "tag": "CCF-A",
+    "abbr": "SICOMP"
+  },
+  "SIAM Journal on Discrete Mathematics": {
+    "tag": "CCF-C",
+    "abbr": "SIDMA"
+  },
+  "SIAM Journal on Imaging Sciences": {
+    "tag": "CCF-B",
+    "abbr": "SIIMS"
+  },
+  "SIG- METRICS International Conference on Measurement and Modeling of Computer Systems": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "Signal Processing": {
+    "tag": "CCF-C",
+    "abbr": "SIGPRO"
+  },
+  "Signal Processing: Image Communication": {
+    "tag": "CCF-C",
+    "abbr": "IMAGE"
+  },
+  "SLT Spoken Language Technology IEEE SLTC": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Soft Computing": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Software and Systems Modeling": {
+    "tag": "CCF-B",
+    "abbr": "SoSyM"
+  },
+  "Software Quality Journal": {
+    "tag": "CCF-C",
+    "abbr": "SQJ"
+  },
+  "Software Testing, Verification and Reliability": {
+    "tag": "CCF-B",
+    "abbr": "STVR"
+  },
+  "Software: Practice and Experience": {
+    "tag": "CCF-B",
+    "abbr": "SPE"
+  },
+  "SOUPS Symposium On Usable Privacy and Security": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Speech Communication": {
+    "tag": "CCF-B",
+    "abbr": "SPECOM"
+  },
+  "SPIN International Symposium on Model Checking of Software": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "ST Mass Storage Systems and Technologies": {
+    "tag": "CCF-B",
+    "abbr": "MS"
+  },
+  "Symposium on Network System Design and Implementation": {
+    "tag": "CCF-A",
+    "abbr": "NSDI"
+  },
+  "Symposium on Solid and Physical Modeling": {
+    "tag": "CCF-B",
+    "abbr": "SPM"
+  },
+  "Symposium on Theoretical Aspects of Computer Science": {
+    "tag": "CCF-C",
+    "abbr": "STACS"
+  },
+  "TASE Theoretical Aspects of Software Engineering Conference": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "TELO ACM Transactions on Evolutionary Learning and Optimization": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "The Computer Journal": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "The Cryptographer's Track at RSA Conference": {
+    "tag": "CCF-C",
+    "abbr": "CT-RSA"
+  },
+  "The International AAAI Conference on Web and Social Media": {
+    "tag": "CCF-B",
+    "abbr": "ICWSM"
+  },
+  "The International ACM Symposium on High-Performance Parallel and Distributed Computing": {
+    "tag": "CCF-A",
+    "abbr": "HPDC"
+  },
+  "The International Symposium on Code Generation and Optimization": {
+    "tag": "CCF-B",
+    "abbr": "CGO"
+  },
+  "The Journal of Strategic Information Systems": {
+    "tag": "CCF-C",
+    "abbr": "JSIS"
+  },
+  "The Journal of Supercomputing": {
+    "tag": "CCF-C",
+    "abbr": "TJSC"
+  },
+  "The Journal of Symbolic Logic": {
+    "tag": "CCF-C",
+    "abbr": "JSL"
+  },
+  "The Journal of the Acoustical Society of America": {
+    "tag": "CCF-B",
+    "abbr": "JASA"
+  },
+  "The Visual Computer": {
+    "tag": "CCF-C",
+    "abbr": "TVC"
+  },
+  "The VLDB Journal": {
+    "tag": "CCF-A",
+    "abbr": "VLDBJ"
+  },
+  "The Web Conference": {
+    "tag": "CCF-B",
+    "abbr": "WWW"
+  },
+  "The Web Conference （原 International World Wide Web Conference）": {
+    "tag": "CCF-A",
+    "abbr": "WWW"
+  },
+  "Theoretical Computer Science": {
+    "tag": "CCF-B",
+    "abbr": "TCS"
+  },
+  "Theory and Practice of Logic Programming": {
+    "tag": "CCF-C",
+    "abbr": "TPLP"
+  },
+  "Theory of Computing Systems": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Theory of Cryptography Conference": {
+    "tag": "CCF-B",
+    "abbr": "TCC"
+  },
+  "USENIX Conference on File and Storage Technologies": {
+    "tag": "CCF-A",
+    "abbr": "FAST"
+  },
+  "USENIX Security Symposium": {
+    "tag": "CCF-A",
+    "abbr": "USENIXSecurity"
+  },
+  "USENIX Symposium on Operating Systems Design and Implementation": {
+    "tag": "CCF-A",
+    "abbr": "OSDI"
+  },
+  "User Modeling and User-Adapted Interaction": {
+    "tag": "CCF-B",
+    "abbr": "UMUAI"
+  },
+  "VEE International Conference on Virtual Execution Environments": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "Virtual Reality & Intelligent Hardware": {
+    "tag": "CCF-C",
+    "abbr": "VRIH"
+  },
+  "Visual Informatics": {
+    "tag": "CCF-C",
+    "abbr": "VI"
+  },
+  "VMCAI International Conference on Verification, Model Checking and Abstract Interpretation": {
+    "tag": "CCF-B",
+    "abbr": null
+  },
+  "VTS IEEE VLSI Test Symposium": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "WASA The International Conference on Wireless Artificial Intelligent Computing Systems and Applications": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "Web Information Systems and Applications": {
+    "tag": "CCF-C",
+    "abbr": "WISA"
+  },
+  "Web Information Systems Engineering Conference": {
+    "tag": "CCF-B",
+    "abbr": "WISE"
+  },
+  "WI Web Intelligence": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "WICSA Working IEEE/IFIP Conference on Software Architecture": {
+    "tag": "CCF-C",
+    "abbr": null
+  },
+  "WiM International Conference on Modeling, Analysis and Simulation of Wireless and Mobile Systems": {
+    "tag": "CCF-C",
+    "abbr": "MS"
+  },
+  "Wireless Communications and Mobile Computing": {
+    "tag": "CCF-C",
+    "abbr": "WCMC"
+  },
+  "Wireless Networks": {
+    "tag": "CCF-C",
+    "abbr": null
+  }
+}
