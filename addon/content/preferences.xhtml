@@ -17,22 +17,63 @@
     PDF、笔记或附件。</html:p
   >
   <checkbox id="zotero-prefpane-__addonRef__-ai-enabled" label="开启 AI 模式" />
+  <html:h3>API 密钥</html:h3>
   <html:label
-    >Base URL（服务根地址，不含 /v1）
-    <html:input id="zotero-prefpane-__addonRef__-ai-base-url" type="url"
+    >Google API 密钥
+    <html:input id="zotero-prefpane-__addonRef__-key-google" type="password"
+  /></html:label>
+  <button
+    id="zotero-prefpane-__addonRef__-confirm-google"
+    label="保存 Google 密钥"
+  />
+  <html:label
+    >OpenAI API 密钥
+    <html:input id="zotero-prefpane-__addonRef__-key-openai" type="password"
+  /></html:label>
+  <button
+    id="zotero-prefpane-__addonRef__-confirm-openai"
+    label="保存 OpenAI 密钥"
+  />
+  <html:label
+    >Anthropic API 密钥
+    <html:input id="zotero-prefpane-__addonRef__-key-anthropic" type="password"
+  /></html:label>
+  <button
+    id="zotero-prefpane-__addonRef__-confirm-anthropic"
+    label="保存 Anthropic 密钥"
+  />
+  <html:h3>自定义服务商</html:h3>
+  <html:label
+    >服务地址
+    <html:input
+      id="zotero-prefpane-__addonRef__-ai-base-url"
+      type="url"
+      placeholder="https://example.com/v1"
   /></html:label>
   <html:label
-    >API Key
-    <html:input id="zotero-prefpane-__addonRef__-ai-key" type="password"
+    >API 密钥
+    <html:input id="zotero-prefpane-__addonRef__-key-custom" type="password"
   /></html:label>
+  <button
+    id="zotero-prefpane-__addonRef__-confirm-custom"
+    label="保存自定义服务商"
+  />
+  <html:label
+    >当前服务商
+    <html:select id="zotero-prefpane-__addonRef__-ai-provider">
+      <html:option value="openai">OpenAI</html:option>
+      <html:option value="google">Google</html:option>
+      <html:option value="anthropic">Anthropic</html:option>
+      <html:option value="custom">自定义服务商</html:option>
+    </html:select>
+  </html:label>
   <html:label
     >模型
-    <html:input
-      id="zotero-prefpane-__addonRef__-ai-model"
-      list="zotero-prefpane-__addonRef__-models"
-  /></html:label>
-  <html:datalist id="zotero-prefpane-__addonRef__-models"></html:datalist>
-  <button id="zotero-prefpane-__addonRef__-load-models" label="加载模型列表" />
+    <html:select id="zotero-prefpane-__addonRef__-ai-model" disabled="disabled">
+      <html:option value="">请先获取模型</html:option>
+    </html:select></html:label
+  >
+  <button id="zotero-prefpane-__addonRef__-load-models" label="获取模型" />
   <html:label
     >思考等级
     <html:select id="zotero-prefpane-__addonRef__-ai-effort">

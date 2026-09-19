@@ -27,38 +27,101 @@ export async function registerPrefsScripts(_window: Window) {
     );
   const enabled = byID<HTMLInputElement>("ai-enabled")!;
   const baseURL = byID<HTMLInputElement>("ai-base-url")!;
-  const key = byID<HTMLInputElement>("ai-key")!;
-  const model = byID<HTMLInputElement>("ai-model")!;
+  const provider = byID<HTMLSelectElement>("ai-provider")!;
+  const model = byID<HTMLSelectElement>("ai-model")!;
   const effort = byID<HTMLSelectElement>("ai-effort")!;
+  const legacyURL = getPref("aiBaseURL") || "";
+  if (
+    getPref("aiProvider") === "openai" &&
+    legacyURL &&
+    !/^https:\/\/api\.openai\.com\/v1\/?$/i.test(legacyURL) &&
+    !getAPIKey("custom")
+  ) {
+    const legacyKey = getAPIKey("openai");
+    if (legacyKey) {
+      await setAPIKey(legacyKey, "custom");
+      setPref("aiProvider", "custom");
+    }
+  }
   enabled.checked = !!getPref("aiEnabled");
-  baseURL.value = getPref("aiBaseURL") || "https://api.openai.com/v1";
-  key.value = getAPIKey();
-  model.value = getPref("aiModel") || "";
+  baseURL.value = getPref("aiBaseURL") || "";
+  provider.value = getPref("aiProvider") || "openai";
+  for (const name of ["google", "openai", "anthropic", "custom"] as const) {
+    const input = byID<HTMLInputElement>(`key-${name}`)!;
+    input.value = getAPIKey(name);
+    byID<HTMLButtonElement>(`confirm-${name}`)!.addEventListener(
+      "command",
+      async () => {
+        await setAPIKey(input.value.trim(), name);
+        if (name === "custom") setPref("aiBaseURL", baseURL.value.trim());
+        if (provider.value === name) {
+          const placeholder = _window.document.createElement("option");
+          placeholder.value = "";
+          placeholder.textContent = "请重新获取模型";
+          model.replaceChildren(placeholder);
+          model.disabled = true;
+          setPref("aiModel", "");
+        }
+        _window.alert("已保存。添加或修改密钥后，请重新获取模型。");
+      },
+    );
+  }
+  const savedModel =
+    getPref("aiModelProvider") === provider.value
+      ? getPref("aiModel") || ""
+      : "";
+  if (savedModel) {
+    const option = _window.document.createElement("option");
+    option.value = savedModel;
+    option.textContent = savedModel;
+    model.replaceChildren(option);
+    model.value = savedModel;
+    model.disabled = false;
+  }
   effort.value = getPref("aiReasoningEffort") || "";
   const save = async () => {
     setPref("aiEnabled", enabled.checked);
-    setPref("aiBaseURL", baseURL.value.trim() || "https://api.openai.com/v1");
-    setPref("aiModel", model.value.trim());
+    setPref("aiProvider", provider.value);
+    setPref("aiBaseURL", baseURL.value.trim());
+    setPref("aiModel", model.value);
+    setPref("aiModelProvider", provider.value);
     setPref("aiReasoningEffort", effort.value);
-    await setAPIKey(key.value.trim());
   };
-  [enabled, baseURL, key, model, effort].forEach((element) =>
+  [enabled, baseURL, model, effort].forEach((element) =>
     element.addEventListener("change", () => void save()),
   );
+  provider.addEventListener("change", () => {
+    const placeholder = _window.document.createElement("option");
+    placeholder.value = "";
+    placeholder.textContent = "请先获取模型";
+    model.replaceChildren(placeholder);
+    model.disabled = true;
+    void save();
+  });
   byID<HTMLButtonElement>("load-models")?.addEventListener(
     "command",
     async () => {
+      const previous = model.value;
       await save();
       try {
         const names = await listModels();
-        const list = byID<HTMLDataListElement>("models")!;
-        list.replaceChildren(
+        if (!names.length) throw new Error("服务返回了空的模型列表。");
+        const placeholder = _window.document.createElement("option");
+        placeholder.value = "";
+        placeholder.textContent = "请选择模型";
+        model.replaceChildren(
+          placeholder,
           ...names.map((name) => {
             const option = _window.document.createElement("option");
             option.value = name;
+            option.textContent = name;
             return option;
           }),
         );
+        model.disabled = false;
+        model.value = names.includes(previous) ? previous : "";
+        setPref("aiModel", model.value);
+        _window.alert(`已获取 ${names.length} 个模型，请从下拉列表选择。`);
       } catch (error) {
         _window.alert(
           `加载模型失败：${error instanceof Error ? error.message : error}`,
@@ -83,12 +146,41 @@ export async function registerPrefsScripts(_window: Window) {
       await save();
       const target = event.currentTarget as HTMLButtonElement;
       target.disabled = true;
+      const progressWindow = new Zotero.ProgressWindow({
+        window: _window,
+        closeOnClick: false,
+      });
+      progressWindow.changeHeadline("AI 元数据检验");
+      const progress = new progressWindow.ItemProgress(
+        `chrome://${config.addonRef}/content/icons/favicon.png`,
+        "正在测试 AI 连接…",
+      );
+      progress.setProgress(0);
+      progressWindow.show();
       try {
-        const result = await verifyAllLibraries();
+        if (!enabled.checked) throw new Error("请先开启 AI 模式。");
+        await checkAIConnection();
+        progress.setText("正在读取文库条目…");
+        const result = await verifyAllLibraries((done, total) => {
+          const percentage = total ? Math.round((done / total) * 100) : 100;
+          progress.setProgress(percentage);
+          progress.setText(`正在检验：${done}/${total} 条`);
+        });
+        progress.setProgress(100);
+        progress.setIcon("chrome://zotero/skin/tick.png");
+        progress.setText(
+          `检验完成：${result.scanned}/${result.total} 条，失败 ${result.failed} 条`,
+        );
+        progressWindow.startCloseTimer(8000);
         _window.alert(
-          `AI 检验完成。已扫描 ${result.scanned}/${result.total} 条。`,
+          `AI 检验完成。已扫描 ${result.scanned}/${result.total} 条，失败 ${result.failed} 条。${result.firstError ? `\n首个错误：${result.firstError}` : ""}`,
         );
       } catch (error) {
+        progress.setError();
+        progress.setText(
+          `检验失败：${error instanceof Error ? error.message : error}`,
+        );
+        progressWindow.startCloseTimer(12000);
         _window.alert(
           `AI 检验失败：${error instanceof Error ? error.message : error}`,
         );

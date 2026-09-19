@@ -227,20 +227,31 @@ export async function verifyAllLibraries(
   for (const library of Zotero.Libraries.getAll())
     if (Zotero.Libraries.isEditable(library.libraryID))
       items.push(
-        ...(await Zotero.Items.getAll(library.libraryID, false, false, false)),
+        ...(
+          await Zotero.Items.getAll(library.libraryID, false, false, false)
+        ).filter(
+          (item) =>
+            item.isRegularItem() && !item.isAttachment() && !item.isNote(),
+        ),
       );
   let done = 0;
+  let failed = 0;
+  let firstError = "";
+  onProgress?.(done, items.length);
   for (const item of items) {
     if (cancelled) break;
     try {
       await verifyItem(item);
     } catch (error) {
       ztoolkit.log("AI verification failed", error);
+      failed += 1;
+      if (!firstError)
+        firstError = error instanceof Error ? error.message : String(error);
     }
     done += 1;
     onProgress?.(done, items.length);
   }
-  return { scanned: done, total: items.length, cancelled };
+  return { scanned: done, total: items.length, failed, firstError, cancelled };
 }
 export function cancelVerification() {
   cancelled = true;
