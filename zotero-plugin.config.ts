@@ -25,6 +25,10 @@ export default defineConfig({
     },
     prefs: {
       prefix: pkg.config.prefsPrefix,
+      aiEnabled: false,
+      aiBaseURL: "https://api.openai.com/v1",
+      aiModel: "",
+      aiReasoningEffort: "",
     },
     esbuildOptions: [
       {

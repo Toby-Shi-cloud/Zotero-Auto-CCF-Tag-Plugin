@@ -10,6 +10,51 @@
     id="zotero-prefpane-__addonRef__-run-library-tagging"
     data-l10n-id="pref-run-batch"
   />
+  <separator class="thin" />
+  <html:h3>AI 元数据检验</html:h3>
+  <html:p
+    >开启后会发送论文书目字段和摘要给所选 AI 服务；不会发送
+    PDF、笔记或附件。</html:p
+  >
+  <checkbox id="zotero-prefpane-__addonRef__-ai-enabled" label="开启 AI 模式" />
+  <html:label
+    >Base URL（服务根地址，不含 /v1）
+    <html:input id="zotero-prefpane-__addonRef__-ai-base-url" type="url"
+  /></html:label>
+  <html:label
+    >API Key
+    <html:input id="zotero-prefpane-__addonRef__-ai-key" type="password"
+  /></html:label>
+  <html:label
+    >模型
+    <html:input
+      id="zotero-prefpane-__addonRef__-ai-model"
+      list="zotero-prefpane-__addonRef__-models"
+  /></html:label>
+  <html:datalist id="zotero-prefpane-__addonRef__-models"></html:datalist>
+  <button id="zotero-prefpane-__addonRef__-load-models" label="加载模型列表" />
+  <html:label
+    >思考等级
+    <html:select id="zotero-prefpane-__addonRef__-ai-effort">
+      <html:option value="">不传递</html:option
+      ><html:option>none</html:option
+      ><html:option>minimal</html:option
+      ><html:option>low</html:option
+      ><html:option>medium</html:option
+      ><html:option>high</html:option
+      ><html:option>xhigh</html:option
+      ><html:option>max</html:option>
+    </html:select></html:label
+  >
+  <button id="zotero-prefpane-__addonRef__-test-ai" label="测试连接" />
+  <button
+    id="zotero-prefpane-__addonRef__-run-ai-library"
+    label="使用 AI 对整个文件库元数据进行检验"
+  />
+  <button
+    id="zotero-prefpane-__addonRef__-view-reviews"
+    label="查看待确认结果"
+  />
 </groupbox>
 <vbox>
   <html:label

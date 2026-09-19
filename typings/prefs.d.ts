@@ -7,7 +7,10 @@
 declare namespace _ZoteroTypes {
   interface Prefs {
     PluginPrefsMap: {
-      
+      "aiEnabled": boolean;
+      "aiBaseURL": string;
+      "aiModel": string;
+      "aiReasoningEffort": string;
     };
   }
 }

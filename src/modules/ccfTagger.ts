@@ -1,4 +1,6 @@
 import { config } from "../../package.json";
+import { enqueueVerification } from "./aiVerification";
+import { getPref } from "../utils/prefs";
 
 type CCFTag = "CCF-A" | "CCF-B" | "CCF-C";
 
@@ -10,6 +12,7 @@ interface CCFEntry {
 type CCFData = Record<string, CCFEntry>;
 
 const CCF_JSON_PATH = `${rootURI}public/ccf.json`;
+const OWNED_TAGS_PREF = `${config.prefsPrefix}.pluginTagOwners`;
 const VENUE_FIELDS = [
   "publicationTitle",
   "proceedingsTitle",
@@ -73,6 +76,35 @@ let abbrIndex: Map<string, CCFEntry> | undefined;
 let sortedFullNameKeys: string[] | undefined;
 let notifierID: string | undefined;
 const suppressedModifyEvents = new Set<number>();
+
+function getOwnedTagNames(itemID: number) {
+  try {
+    const all = JSON.parse(
+      String(Zotero.Prefs.get(OWNED_TAGS_PREF, true) || "{}"),
+    ) as Record<string, string[]>;
+    return all[String(itemID)] || [];
+  } catch (_) {
+    return [];
+  }
+}
+
+function recordOwnedTags(itemID: number, tags: string[]) {
+  try {
+    const all = JSON.parse(
+      String(Zotero.Prefs.get(OWNED_TAGS_PREF, true) || "{}"),
+    ) as Record<string, string[]>;
+    all[String(itemID)] = Array.from(
+      new Set([...(all[String(itemID)] || []), ...tags]),
+    );
+    Zotero.Prefs.set(OWNED_TAGS_PREF, JSON.stringify(all), true);
+  } catch (_) {
+    /* ownership tracking must not block tagging */
+  }
+}
+
+export function getPluginOwnedTags(itemID: number) {
+  return getOwnedTagNames(itemID);
+}
 
 function stripEditionWords(value: string): string {
   EDITION_WORD_REGEX.lastIndex = 0;
@@ -175,7 +207,7 @@ function getVenueCandidates(item: Zotero.Item): string[] {
   return candidates;
 }
 
-async function findCCFEntryForItem(
+export async function findCCFEntryForItem(
   item: Zotero.Item,
 ): Promise<CCFEntry | undefined> {
   await loadCCFData();
@@ -214,6 +246,43 @@ function getTagsByEntry(entry: CCFEntry): string[] {
   return [entry.tag];
 }
 
+export async function getCCFTagsForVenue(venue: string): Promise<string[]> {
+  await loadCCFData();
+  if (!fullNameIndex || !abbrIndex || !sortedFullNameKeys) return [];
+  for (const key of getVenueNameVariants(venue)) {
+    const entry =
+      fullNameIndex.get(key) ||
+      abbrIndex.get(key) ||
+      fullNameIndex.get(
+        sortedFullNameKeys.find((name) => key.includes(name)) || "",
+      );
+    if (entry) return getTagsByEntry(entry);
+  }
+  return [];
+}
+
+const NATURE_PORTFOLIO = new Map<string, string>([
+  ["nature", "Nature"],
+  ["nature communications", "Nature Communications"],
+  ["nature machine intelligence", "Nature Machine Intelligence"],
+  ["nature methods", "Nature Methods"],
+  ["nature neuroscience", "Nature Neuroscience"],
+  ["nature physics", "Nature Physics"],
+  ["communications biology", "Communications Biology"],
+  ["communications physics", "Communications Physics"],
+  ["scientific reports", "Scientific Reports"],
+  ["scientific data", "Scientific Data"],
+]);
+export function getNatureTags(venue: string) {
+  const normalized = normalizeVenueName(venue);
+  const journal = NATURE_PORTFOLIO.get(normalized);
+  return journal
+    ? journal === "Nature"
+      ? ["Nature"]
+      : ["Nature Portfolio", journal]
+    : [];
+}
+
 export async function applyCCFTagsToItem(item: Zotero.Item): Promise<boolean> {
   if (!item.isRegularItem() || item.isAttachment() || item.isNote()) {
     return false;
@@ -236,6 +305,8 @@ export async function applyCCFTagsToItem(item: Zotero.Item): Promise<boolean> {
       suppressedModifyEvents.add(item.id);
     }
     await item.saveTx();
+    if (typeof item.id === "number")
+      recordOwnedTags(item.id, getTagsByEntry(entry));
   }
 
   return changed;
@@ -254,6 +325,8 @@ async function applyTagsToItemIDs(ids: Array<number | string>) {
     if (await applyCCFTagsToItem(item)) {
       tagged += 1;
     }
+    if (typeof item.id === "number" && getPref("aiEnabled"))
+      enqueueVerification(item.id);
   }
 
   return { scanned, tagged };
@@ -309,12 +382,14 @@ export function registerCCFNotifier() {
         const activeIDs = ids.filter(
           (id): id is number => typeof id === "number",
         );
-        const shouldSuppress = activeIDs.some((id) =>
-          suppressedModifyEvents.delete(id),
+        const unsuppressedIDs = activeIDs.filter(
+          (id) => !suppressedModifyEvents.delete(id),
         );
-        if (shouldSuppress) {
-          return;
-        }
+        if (!unsuppressedIDs.length) return;
+        ids = [
+          ...unsuppressedIDs,
+          ...ids.filter((id) => typeof id !== "number"),
+        ];
       }
 
       try {

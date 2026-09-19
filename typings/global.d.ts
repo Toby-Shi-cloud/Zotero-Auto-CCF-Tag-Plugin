@@ -14,5 +14,7 @@ declare const ztoolkit: ZToolkit;
 declare const rootURI: string;
 
 declare const addon: import("../src/addon").default;
+declare const Services: JSServices;
+declare const Components: any;
 
 declare const __env__: "production" | "development";
