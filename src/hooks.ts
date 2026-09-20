@@ -1,3 +1,4 @@
+import { registerReviewPane, unregisterReviewPane } from "./modules/reviewPane";
 import { initLocale } from "./utils/locale";
 import { registerPrefsScripts } from "./modules/preferenceScript";
 import { registerPrefsPane } from "./modules/prefs";
@@ -16,6 +17,7 @@ async function onStartup() {
   initLocale();
   registerPrefsPane();
   registerCCFNotifier();
+  registerReviewPane();
 
   addon.data.initialized = true;
 }
@@ -26,6 +28,7 @@ async function onMainWindowUnload(_win: Window): Promise<void> {}
 
 function onShutdown(): void {
   unregisterCCFNotifier();
+  unregisterReviewPane();
   ztoolkit.unregisterAll();
   addon.data.alive = false;
   // @ts-expect-error - Plugin instance is not typed

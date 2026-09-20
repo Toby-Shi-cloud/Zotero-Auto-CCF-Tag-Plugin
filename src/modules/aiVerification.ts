@@ -1,21 +1,9 @@
 import { getPref } from "../utils/prefs";
 import { inspectWithAI } from "./aiClient";
 import { searchAcademic, extractArxivID } from "./academicSearch";
-import type {
-  AcademicCandidate,
-  ItemSnapshot,
-  ReviewSuggestion,
-} from "./aiTypes";
-import {
-  saveSuggestion,
-  getSuggestions,
-  updateSuggestion,
-} from "./reviewStore";
-import {
-  getCCFTagsForVenue,
-  getNatureTags,
-  getPluginOwnedTags,
-} from "./ccfTagger";
+import type { AcademicCandidate, ItemSnapshot } from "./aiTypes";
+import { getSuggestions, markReviewed, saveSuggestion } from "./reviewStore";
+import { getCCFTagsForVenue, getNatureTags } from "./ccfTagger";
 
 const FIELDS = [
   "title",
@@ -89,7 +77,7 @@ function candidateChanges(item: ItemSnapshot, candidate: AcademicCandidate) {
     abstractNote: candidate.abstract,
   };
   return Object.entries(map)
-    .filter(([field, after]) => !!after && after !== item.fields[field])
+    .filter(([field, after]) => !!after && !item.fields[field])
     .map(([field, after]) => ({
       field,
       before: item.fields[field] || "",
@@ -110,6 +98,7 @@ function confidence(snapshot: ItemSnapshot, candidate: AcademicCandidate) {
 export async function verifyItem(item: Zotero.Item) {
   if (
     !getPref("aiEnabled") ||
+    getSuggestions().some((entry) => entry.itemID === item.id) ||
     !item.isRegularItem() ||
     item.isAttachment() ||
     item.isNote()
@@ -128,93 +117,66 @@ export async function verifyItem(item: Zotero.Item) {
   const reliable =
     !!candidate && judgement.samePaper && confidence(before, candidate);
   const changes = reliable ? candidateChanges(before, candidate!) : [];
-  const missing = changes.filter((x) => !x.before);
-  const conflicts = changes.filter((x) => x.before);
+  const missing = changes;
   const existingVenue =
     before.fields.publicationTitle ||
     before.fields.proceedingsTitle ||
     before.fields.conferenceName ||
     before.fields.bookTitle ||
     "";
-  const venue = reliable ? candidate?.venue || existingVenue : existingVenue;
+  const venue = existingVenue || (reliable ? candidate?.venue || "" : "");
   const desiredTags = [
     ...(await getCCFTagsForVenue(venue)),
     ...getNatureTags(venue),
   ];
-  const ccfTags = before.tags.filter((x) => /^CCF-[ABC]$/.test(x));
-  const ownedTags = getPluginOwnedTags(before.id);
-  const tagsToRemove = reliable
-    ? [
-        ...ccfTags,
-        ...ownedTags.filter((tag) => before.tags.includes(tag)),
-      ].filter(
-        (tag, index, all) =>
-          !desiredTags.includes(tag) && all.indexOf(tag) === index,
-      )
-    : [];
   const tagsToAdd = desiredTags.filter((tag) => !before.tags.includes(tag));
-  const venueConflict = conflicts.some((change) =>
-    [
-      "publicationTitle",
-      "proceedingsTitle",
-      "conferenceName",
-      "bookTitle",
-    ].includes(change.field),
-  );
-  // Missing, reliable values are applied without review. Existing values and all destructive changes remain reviewable.
-  if (missing.length || (tagsToAdd.length && !venueConflict))
-    await applyChanges(
-      item,
-      before.fingerprint,
-      missing,
-      venueConflict ? [] : tagsToAdd,
-      [],
-    );
-  if (
-    conflicts.length ||
-    tagsToRemove.length ||
-    (extractArxivID(before) && candidate && candidate.source !== "arxiv")
-  ) {
-    const suggestion: ReviewSuggestion = {
-      id: `${item.id}:${Date.now()}`,
-      itemID: item.id as number,
+  if (missing.length || tagsToAdd.length)
+    saveSuggestion({
+      id: String(before.id),
+      itemID: before.id,
       fingerprint: before.fingerprint,
       status: "pending",
-      changes: conflicts,
-      tagsToAdd: venueConflict ? tagsToAdd : [],
-      tagsToRemove,
-      formalVersion:
-        extractArxivID(before) && candidate && candidate.source !== "arxiv"
-          ? candidate
-          : undefined,
+      changes: missing,
+      tagsToAdd,
+      tagsToRemove: [],
       summary: judgement.explanation,
       createdAt: Date.now(),
-    };
-    saveSuggestion(suggestion);
-  }
+    });
 }
-async function applyChanges(
-  item: Zotero.Item,
-  fingerprint: string,
-  changes: Array<{ field: string; before: string; after: string }>,
-  add: string[],
-  remove: string[],
-) {
-  if (snapshot(item).fingerprint !== fingerprint || !getPref("aiEnabled"))
-    return;
-  for (const change of changes) {
-    if (!safeField(item, change.field)) {
+
+export async function reviewItem(
+  itemID: number,
+  apply: boolean,
+): Promise<boolean> {
+  const suggestion = getSuggestions().find(
+    (entry) => entry.itemID === itemID && entry.status === "pending",
+  );
+  if (!suggestion) return false;
+  if (apply) {
+    const item = await Zotero.Items.getAsync(itemID);
+    // Re-check each value; stale suggestions never overwrite existing metadata.
+    let changed = false;
+    for (const change of suggestion.changes) {
+      if (safeField(item, change.field)) continue;
       try {
         item.setField(change.field, change.after);
+        changed = true;
       } catch (_) {
         // Field is unsupported by this Zotero item type.
       }
     }
+    const existingTags = new Set(item.getTags().map((tag) => tag.tag));
+    for (const tag of suggestion.tagsToAdd) {
+      if (existingTags.has(tag)) continue;
+      item.addTag(tag);
+      changed = true;
+    }
+    if (changed) await item.saveTx();
   }
-  add.forEach((tag) => item.addTag(tag));
-  remove.forEach((tag) => item.removeTag(tag));
-  if (changes.length || add.length || remove.length) await item.saveTx();
+  markReviewed(itemID, apply ? "applied" : "rejected");
+  return true;
 }
+
 export function enqueueVerification(id: number) {
   queued.add(id);
   void drain();
@@ -269,96 +231,4 @@ async function drain() {
     }
   }
   running = false;
-}
-export async function applySuggestion(
-  id: string,
-  selectedFields?: string[],
-  applyTags = true,
-  addFormalVersion = true,
-) {
-  const s = getSuggestions().find((x) => x.id === id);
-  if (!s || s.status !== "pending") return;
-  const item = await Zotero.Items.getAsync(s.itemID);
-  if (snapshot(item).fingerprint !== s.fingerprint) return;
-  const changes = selectedFields
-    ? s.changes.filter((change) => selectedFields.includes(change.field))
-    : s.changes;
-  for (const change of changes) {
-    try {
-      item.setField(change.field, change.after);
-    } catch (_) {
-      // Field is unsupported by this Zotero item type.
-    }
-  }
-  if (applyTags) {
-    s.tagsToAdd.forEach((tag) => item.addTag(tag));
-    s.tagsToRemove.forEach((tag) => item.removeTag(tag));
-  }
-  if (addFormalVersion && s.formalVersion)
-    await createOrRelateFormalVersion(item, s.formalVersion);
-  await item.saveTx();
-  updateSuggestion(id, { status: "applied" });
-}
-export function rejectSuggestion(id: string) {
-  updateSuggestion(id, { status: "rejected" });
-}
-
-async function createOrRelateFormalVersion(
-  item: Zotero.Item,
-  candidate: AcademicCandidate,
-) {
-  const doi = candidate.doi?.toLowerCase();
-  const all = await Zotero.Items.getAll(item.libraryID, false, false, false);
-  const existing =
-    doi &&
-    all.find(
-      (other) =>
-        other.id !== item.id && safeField(other, "DOI").toLowerCase() === doi,
-    );
-  if (existing) {
-    item.addRelatedItem(existing);
-    existing.addRelatedItem(item);
-    await existing.saveTx();
-    return;
-  }
-  const formal = new Zotero.Item(
-    candidate.venue ? "conferencePaper" : "journalArticle",
-  );
-  formal.libraryID = item.libraryID;
-  const fields: Record<string, string | undefined> = {
-    title: candidate.title,
-    DOI: candidate.doi,
-    publicationTitle: candidate.venue,
-    date: candidate.date,
-    volume: candidate.volume,
-    issue: candidate.issue,
-    pages: candidate.pages,
-    publisher: candidate.publisher,
-    ISSN: candidate.issn,
-    url: candidate.url,
-    abstractNote: candidate.abstract,
-  };
-  for (const [field, value] of Object.entries(fields)) {
-    if (!value) continue;
-    try {
-      formal.setField(field, value);
-    } catch (_) {
-      // Field is unsupported by the chosen item type.
-    }
-  }
-  if (candidate.creators?.length)
-    formal.setCreators(
-      candidate.creators.map((creator) => ({
-        ...creator,
-        creatorType: "author",
-      })),
-    );
-  item
-    .getCollections()
-    .forEach((collectionID) => formal.addToCollection(collectionID));
-  formal.addTag("正式发表版本");
-  await formal.saveTx();
-  item.addRelatedItem(formal);
-  formal.addRelatedItem(item);
-  await formal.saveTx();
 }

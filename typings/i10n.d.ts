@@ -13,4 +13,6 @@ export type FluentMessageId =
   | 'pref-help'
   | 'pref-run-batch'
   | 'pref-title'
-  | 'prefs-title';
+  | 'prefs-title'
+  | 'review-pane-title'
+  | 'review-pane-tooltip';

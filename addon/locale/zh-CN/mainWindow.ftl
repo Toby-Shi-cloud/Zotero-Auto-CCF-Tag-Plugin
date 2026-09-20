@@ -9,3 +9,8 @@ item-section-example2-sidenav-tooltip =
 item-section-example2-button-tooltip =
     .tooltiptext = 移除此面板
 item-info-row-example-label = 示例行
+
+review-pane-title =
+    .label = 待确认补全
+review-pane-tooltip =
+    .tooltiptext = 待确认补全

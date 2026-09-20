@@ -9,3 +9,8 @@ item-section-example2-sidenav-tooltip =
 item-section-example2-button-tooltip =
     .tooltiptext = Unregister this section
 item-info-row-example-label = Example Row
+
+review-pane-title =
+    .label = Pending metadata additions
+review-pane-tooltip =
+    .tooltiptext = Pending metadata additions

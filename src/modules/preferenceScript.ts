@@ -5,12 +5,7 @@ import {
   listModels,
   setAPIKey,
 } from "./aiClient";
-import {
-  applySuggestion,
-  rejectSuggestion,
-  verifyAllLibraries,
-} from "./aiVerification";
-import { getSuggestions } from "./reviewStore";
+import { verifyAllLibraries } from "./aiVerification";
 import { getPref, setPref } from "../utils/prefs";
 import { config } from "../../package.json";
 
@@ -186,35 +181,6 @@ export async function registerPrefsScripts(_window: Window) {
         );
       } finally {
         target.disabled = false;
-      }
-    },
-  );
-  byID<HTMLButtonElement>("view-reviews")?.addEventListener(
-    "command",
-    async () => {
-      const pending = getSuggestions().filter((x) => x.status === "pending");
-      if (!pending.length) return _window.alert("没有待确认结果。");
-      for (const suggestion of pending) {
-        const selected = suggestion.changes
-          .filter((change) =>
-            _window.confirm(
-              `条目 ${suggestion.itemID}\n${suggestion.summary}\n\n应用此字段？\n${change.field}:\n${change.before} → ${change.after}`,
-            ),
-          )
-          .map((change) => change.field);
-        const applyTags =
-          (!suggestion.tagsToAdd.length && !suggestion.tagsToRemove.length) ||
-          _window.confirm(
-            `条目 ${suggestion.itemID}\n\n应用标签变更？\n新增：${suggestion.tagsToAdd.join(", ") || "无"}\n删除：${suggestion.tagsToRemove.join(", ") || "无"}`,
-          );
-        const addFormal =
-          !suggestion.formalVersion ||
-          _window.confirm(
-            `条目 ${suggestion.itemID}\n\n新增并关联正式发表版本？\n${suggestion.formalVersion.title || ""}\n${suggestion.formalVersion.venue || ""}\n${suggestion.formalVersion.doi || ""}`,
-          );
-        if (selected.length || applyTags || addFormal)
-          await applySuggestion(suggestion.id, selected, applyTags, addFormal);
-        else rejectSuggestion(suggestion.id);
       }
     },
   );
